@@ -1,0 +1,138 @@
+{
+  "purchase_options": {
+    "single": {
+      "label": "10元1抽",
+      "price": 10,
+      "keys": 1
+    },
+    "bundle": {
+      "label": "100元11抽",
+      "price": 100,
+      "keys": 11
+    }
+  },
+  "pool": [
+    {
+      "id": "knife_champion",
+      "name": "Knife-冠军之刃",
+      "type": "item",
+      "weight": 0.1,
+      "decompose_points": 120,
+      "exchange_points": 1188
+    },
+    {
+      "id": "huanshen_champion",
+      "name": "幻神-冠军之幻",
+      "type": "item",
+      "weight": 0.15,
+      "decompose_points": 120,
+      "exchange_points": 1188
+    },
+    {
+      "id": "colt_champion",
+      "name": "柯尔特-冠军之特",
+      "type": "item",
+      "weight": 0.2,
+      "decompose_points": 80,
+      "exchange_points": 888
+    },
+    {
+      "id": "qbz_champion",
+      "name": "QBZ03-冠军之薇",
+      "type": "item",
+      "weight": 0.2,
+      "decompose_points": 80,
+      "exchange_points": 888
+    },
+    {
+      "id": "white_tiger_skin",
+      "name": "白虎-巅峰荣耀",
+      "type": "item",
+      "weight": 0.25,
+      "decompose_points": 60,
+      "exchange_points": 768
+    },
+    {
+      "id": "raytheon_glory",
+      "name": "雷神-荣耀之魄",
+      "type": "item",
+      "weight": 0.4,
+      "decompose_points": 40,
+      "exchange_points": 468
+    },
+    {
+      "id": "destroy_glory",
+      "name": "毁灭-荣耀之怒",
+      "type": "item",
+      "weight": 0.7,
+      "decompose_points": 30,
+      "exchange_points": 288
+    },
+    {
+      "id": "dragon_glory",
+      "name": "屠龙-荣耀之锋",
+      "type": "item",
+      "weight": 0.8,
+      "decompose_points": 30,
+      "exchange_points": 288
+    },
+    {
+      "id": "c4_no_tool",
+      "name": "C4-高无钳",
+      "type": "item",
+      "weight": 1.5,
+      "decompose_points": 20,
+      "exchange_points": 188
+    },
+    {
+      "id": "king_stone",
+      "name": "王者之石*1",
+      "type": "item",
+      "weight": 5.2,
+      "decompose_points": 10,
+      "exchange_points": 88
+    },
+    {
+      "id": "points_pool",
+      "name": "积分",
+      "type": "points_group",
+      "children": [
+        {
+          "name": "88积分",
+          "points": 88,
+          "weight": 0.5
+        },
+        {
+          "name": "66积分",
+          "points": 66,
+          "weight": 1
+        },
+        {
+          "name": "20积分",
+          "points": 20,
+          "weight": 2
+        },
+        {
+          "name": "10积分",
+          "points": 10,
+          "weight": 5
+        },
+        {
+          "name": "8积分",
+          "points": 8,
+          "weight": 8
+        },
+        {
+          "name": "6积分",
+          "points": 6,
+          "weight": 35
+        },
+        {
+          "name": "5积分",
+          "points": 5,
+          "weight": 39
+        }
+      ]
+    }
+  ]
+}

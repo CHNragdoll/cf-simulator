@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>抽奖模拟器</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="panel">
+        <h1>抽奖模拟器</h1>
+        <div class="stats-grid" id="topStats"></div>
+      </header>
+
+      <section class="panel">
+        <h2>购买钥匙</h2>
+        <div class="btn-row">
+          <button id="buySingle">10元1抽</button>
+          <button id="buyBundle">100元11抽</button>
+          <button class="ghost" id="resetState">重置模拟数据</button>
+          <button class="ghost" id="reloadConfig">重载后端配置</button>
+        </div>
+      </section>
+
+      <section class="panel stage-panel">
+        <div class="title-row">
+          <h2>抽奖奖池</h2>
+          <button class="ghost" id="showProbBtn">概率公布</button>
+        </div>
+        <div id="prizeGrid" class="prize-grid"></div>
+        <div class="draw-center" id="drawCenterPanel">
+          <div class="draw-center-top">
+            <span>我的积分：<em id="centerPoints">0</em></span>
+            <span>剩余钥匙：<em id="centerKeys">0</em></span>
+          </div>
+          <div class="draw-actions">
+            <button class="draw-btn" id="draw1">抽一次</button>
+            <button class="draw-btn active" id="draw10">抽十次</button>
+          </div>
+          <label class="no-popup">
+            <input type="checkbox" id="skipPopup" />
+            中奖后不再单独弹出奖励弹窗
+          </label>
+        </div>
+      </section>
+
+      <section class="panel stash-summary-panel">
+        <div class="stash-box">
+          <div class="stash-icon-wrap">
+            <img src="https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/part1_zcx_img.png" alt="暂存箱">
+          </div>
+          <div class="stash-brief">
+            <h2>暂存箱</h2>
+            <p>抽奖获得的可分解道具进入暂存箱</p>
+            <p>点击可查看暂存明细和分解钥匙表</p>
+            <button id="openStashModal">点击查看暂存箱</button>
+          </div>
+        </div>
+        <div class="summary-box">
+          <div class="summary-head">
+            <h2>抽奖统计</h2>
+            <button class="ghost" id="openGiftRecord">礼包记录</button>
+          </div>
+          <div id="drawSummary" class="summary-list"></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>仓库直发</h2>
+        <div id="warehouseList" class="list"></div>
+      </section>
+
+      <section class="panel">
+        <h2>积分兑换（保底兑换）</h2>
+        <div id="redeemList" class="list"></div>
+      </section>
+
+      <section class="panel">
+        <h2>数据分析</h2>
+        <div id="analysisSummary" class="stats-grid"></div>
+        <div class="analysis-grid">
+          <div class="analysis-box">
+            <h3>抽中分布（全部）</h3>
+            <div id="analysisDistribution" class="list"></div>
+          </div>
+          <div class="analysis-box">
+            <h3>累计积分趋势</h3>
+            <svg id="analysisTrend" class="trend-svg" viewBox="0 0 600 240" preserveAspectRatio="none"></svg>
+            <div id="analysisLinearFormula" class="tip"></div>
+          </div>
+        </div>
+        <div class="analysis-box">
+          <h3>理论值 vs 实际值（全部）</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>奖项</th>
+                <th>理论命中</th>
+                <th>实际命中</th>
+                <th>偏差</th>
+              </tr>
+            </thead>
+            <tbody id="analysisExpected"></tbody>
+          </table>
+        </div>
+        <div class="analysis-grid">
+          <div class="analysis-box">
+            <h3>置信区间与显著性（全部）</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>奖项</th>
+                  <th>观察命中率</th>
+                  <th>95%置信区间</th>
+                  <th>Z值</th>
+                </tr>
+              </thead>
+              <tbody id="analysisConfidence"></tbody>
+            </table>
+          </div>
+          <div class="analysis-box">
+            <h3>最近50抽 vs 全局（全部）</h3>
+            <div id="analysisRecent" class="list"></div>
+          </div>
+        </div>
+        <div class="analysis-grid">
+          <div class="analysis-box">
+            <h3>积分命中值分布（全部）</h3>
+            <div id="analysisPointsValueDist" class="list"></div>
+          </div>
+          <div class="analysis-box">
+            <h3>理论-实际偏差曲线（全部）</h3>
+            <svg id="analysisProbCompare" class="trend-svg" viewBox="0 0 600 240" preserveAspectRatio="none"></svg>
+          </div>
+        </div>
+        <div class="analysis-box">
+          <h3>按日趋势与异常提醒</h3>
+          <svg id="analysisDaily" class="trend-svg" viewBox="0 0 600 240" preserveAspectRatio="none"></svg>
+          <div id="analysisAlerts" class="list"></div>
+        </div>
+        <div class="analysis-box">
+          <h3>模拟模块</h3>
+          <div class="sim-control">
+            <label for="simRuns">模拟次数</label>
+            <input id="simRuns" type="number" min="10" step="10" value="500">
+            <label for="simStrategy">策略</label>
+            <select id="simStrategy">
+              <option value="min_unit">最低单钥匙成本</option>
+              <option value="single_first">优先10元1抽</option>
+              <option value="bundle_first">优先100元11抽</option>
+            </select>
+            <button id="runSimulation">开始模拟</button>
+          </div>
+          <div id="simProgressWrap" class="sim-progress" style="display:none;">
+            <div class="sim-progress-bar-bg">
+              <div id="simProgressBar" class="sim-progress-bar"></div>
+            </div>
+            <div id="simProgressText" class="sim-progress-text">排队中</div>
+          </div>
+          <div id="simSummary" class="stats-grid"></div>
+          <div class="analysis-grid">
+            <div class="analysis-box">
+              <h3>全分解 vs 纯保底（均值）</h3>
+              <svg id="simCostChart" class="trend-svg" viewBox="0 0 600 240" preserveAspectRatio="none"></svg>
+            </div>
+            <div class="analysis-box">
+              <h3>建模结果</h3>
+              <div id="simModel" class="list"></div>
+            </div>
+          </div>
+          <div class="analysis-grid">
+            <div class="analysis-box">
+              <h3>达成成本分布曲线（CDF）</h3>
+              <svg id="simCdfChart" class="trend-svg" viewBox="0 0 600 240" preserveAspectRatio="none"></svg>
+            </div>
+            <div class="analysis-box">
+              <h3>95%成本区间图</h3>
+              <svg id="simCiChart" class="trend-svg" viewBox="0 0 600 240" preserveAspectRatio="none"></svg>
+            </div>
+          </div>
+          <div class="stash-modal-table-wrap">
+            <div class="rounded-table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>道具</th>
+                    <th>全分解均价</th>
+                    <th>全分解P50/P90</th>
+                    <th>纯保底均价</th>
+                    <th>命中方式占比(抽中/兑换)</th>
+                  </tr>
+                </thead>
+                <tbody id="simTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="analysis-box">
+          <h3>免责声明</h3>
+          <div class="analysis-disclaimer">
+            <p>1. 本页面为本地抽奖模拟与概率演示工具，不构成真实活动结果、商业承诺或收益保证。</p>
+            <p>2. 所有概率、图表和统计结论仅基于当前数据库配置与本地样本，样本量不足时偏差会明显放大。</p>
+            <p>3. 线性拟合、置信区间、Z值、卡方统计等均为近似分析方法，不代表必然趋势或最终结论。</p>
+            <p>4. “欧皇时刻”“异常提醒”等仅用于提示可视化特征，不可直接推导为系统异常或概率失真。</p>
+            <p>5. 修改奖池、概率、分解、兑换、保底、弹窗规则或历史记录后，分析结果会即时变化，历史结论可能失效。</p>
+            <p>6. 本工具不接入官方发奖系统，不验证真实账号资产，不提供任何真实道具发放能力。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="resultModal" aria-hidden="true">
+      <div class="modal-card result-card">
+        <div class="modal-head">
+          <h3 id="resultTitle">恭喜您获得</h3>
+          <button class="close-btn" id="closeModal">×</button>
+        </div>
+        <p class="result-tip">抽奖过程请勿刷新页面或中断，以实际礼包记录为准。</p>
+        <div id="resultBody" class="result-body"></div>
+        <p class="result-total">获得总积分：<em id="resultTotalPoints">0</em></p>
+        <div class="result-notes">
+          <p>温馨提示</p>
+          <p>1：可分解道具奖励将发往暂存箱（具体请点击暂存箱查看）；</p>
+          <p>2：其余道具奖励将在24小时内发往游戏内；</p>
+          <p>3：积分等非游戏内道具在本页面查看。</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <div class="modal" id="probabilityModal" aria-hidden="true">
+      <div class="modal-card">
+        <div class="modal-head">
+          <h3>概率公布</h3>
+          <button class="close-btn" id="closeProbModal">×</button>
+        </div>
+        <div class="rounded-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>奖项</th>
+                <th>概率</th>
+              </tr>
+            </thead>
+            <tbody id="probabilityTable"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="stashModal" aria-hidden="true">
+      <div class="modal-card stash-modal-card">
+        <div class="modal-head">
+          <h3>暂存箱</h3>
+          <button class="close-btn" id="closeStashModal">×</button>
+        </div>
+        <div class="stash-modal-grid">
+          <div class="stash-modal-table-wrap">
+            <h4>暂存道具表</h4>
+            <div class="rounded-table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>名称</th>
+                    <th>领取道具</th>
+                    <th>分解为钥匙</th>
+                  </tr>
+                </thead>
+                <tbody id="stashModalTable"></tbody>
+              </table>
+            </div>
+            <div class="pager">
+              <button id="stashPrevPage" class="ghost">上一页</button>
+              <span id="stashPageInfo">1 / 1</span>
+              <button id="stashNextPage" class="ghost">下一页</button>
+            </div>
+          </div>
+          <div class="stash-modal-table-wrap">
+            <h4>道具分解表</h4>
+            <div class="rounded-table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>名称</th>
+                    <th>分解所获钥匙</th>
+                  </tr>
+                </thead>
+                <tbody id="stashDecomposeTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="giftRecordModal" aria-hidden="true">
+      <div class="modal-card stash-modal-card">
+        <div class="modal-head">
+          <h3>礼包记录</h3>
+          <button class="close-btn" id="closeGiftRecordModal">×</button>
+        </div>
+        <div class="gift-tabs">
+          <button id="giftTabDraw" class="active">抽奖奖池</button>
+          <button id="giftTabRedeem">积分兑换</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th id="giftTimeHeader">获奖时间</th>
+              <th id="giftAreaHeader">获奖大区</th>
+              <th id="giftNameHeader">获奖礼包</th>
+              <th id="giftExtraHeader">欧皇时刻</th>
+            </tr>
+          </thead>
+          <tbody id="giftRecordTable"></tbody>
+        </table>
+        <div class="pager">
+          <button id="giftPrevPage" class="ghost">上一页</button>
+          <span id="giftPageInfo">1 / 1</span>
+          <button id="giftNextPage" class="ghost">下一页</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
