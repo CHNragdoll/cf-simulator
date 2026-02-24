@@ -19,13 +19,35 @@ See the [LICENSE](LICENSE) file for details.
 
 - 买钥匙（`10元1抽`、`100元11抽`）
 - 单抽 / 十连
+  <img width="1658" height="1496" alt="693197dfc6c63389289578e6b44ba81a" src="https://github.com/user-attachments/assets/0c20ee23-18b1-44eb-b074-77a5f833f25c" />
 - 道具进暂存箱或直发仓库
+  <img width="1514" height="662" alt="c8825228da17dcbe3811d70940a7f29f" src="https://github.com/user-attachments/assets/6b578e25-66eb-4d6d-a5d8-31f97b394f2b" />
+
+  <img width="1328" height="1044" alt="f50f85c0396273826e95775683aa3082" src="https://github.com/user-attachments/assets/e4bb8d7e-e4d8-4b2e-ad8a-51e1f7fa6495" />
+
 - 暂存箱道具可“发送仓库”或“分解换积分/钥匙”
+  <img width="1774" height="1254" alt="f27d0ad880e47d1b0ee8a1dfcb003da8" src="https://github.com/user-attachments/assets/4e140762-0529-4bb0-a57e-47a0d6b4e39b" />
+
 - 积分兑换（保底兑换）
+  <img width="837" height="603" alt="image" src="https://github.com/user-attachments/assets/13bb2f24-5dc1-4859-9e06-88bb55299053" />
+
 - 概率公布弹窗
+  
+  <img width="629" height="529" alt="image" src="https://github.com/user-attachments/assets/ad3d892b-af36-49ee-8739-9e6a9e9341e8" />
+
 - 抽奖历史 / 兑换历史
+  <img width="1664" height="1094" alt="5442203d2ec81e92891b3e0f59b88bc8" src="https://github.com/user-attachments/assets/3be02f9a-0a0c-42ab-b99e-b65e32d20d3f" />
+  <img width="1614" height="598" alt="cef51aed726127c256e7adecd118f55f" src="https://github.com/user-attachments/assets/34b04b66-d822-44f6-9234-739d0d5b1548" />
+
+
 - 数据分析（分布、理论值偏差、置信区间、Z 值、卡方、趋势拟合）
+  <img width="2028" height="1422" alt="39270094844c31fe69ce3a59dc1ccfc8" src="https://github.com/user-attachments/assets/78da084f-5a67-4635-bd31-37f4c7141ce0" />
+  <img width="1818" height="1526" alt="c12baca4492c535300c94dae80b82ed4" src="https://github.com/user-attachments/assets/e306e39a-5a4c-44a7-96bd-b621f071705c" />
+  <img width="2142" height="1326" alt="325ad4a19b2344136416619682d1c657" src="https://github.com/user-attachments/assets/bc60355e-adf1-4414-a9aa-824dfb962660" />
+
 - Monte Carlo 模拟（不同策略下达成目标道具的成本分布）
+  <img width="1906" height="1518" alt="a85eb66916d2038f5817b8ac749b3893" src="https://github.com/user-attachments/assets/624abadd-4568-4acc-a19a-fbaf73b2bfdc" />
+  <img width="1664" height="1094" alt="5442203d2ec81e92891b3e0f59b88bc8" src="https://github.com/user-attachments/assets/eb4e9e4d-1a2f-407b-810a-14151857dbf4" />
 
 ---
 
