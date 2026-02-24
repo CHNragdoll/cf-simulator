@@ -1,5 +1,12 @@
 # 穿越火线抽奖模拟器（本地版）超详细 README
 
+## License
+
+This project **cf-simulator** is licensed under the **GNU General Public License v3.0 (GPL-3.0)**.
+
+Copyright (C) 2026 CHNragdoll  
+See the [LICENSE](LICENSE) file for details.
+
 这是一套**纯本地运行**的抽奖活动模拟器。你可以把它当成一个“可改概率、可改奖池、可看统计、可做成本模拟”的活动沙盘。
 
 如果你完全不懂代码，按本文的“第 1 步、第 2 步”做，也能跑起来并正常操作。
