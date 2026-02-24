@@ -18,6 +18,8 @@ See the [LICENSE](LICENSE) file for details.
 它支持：
 
 - 买钥匙（`10元1抽`、`100元11抽`）
+  <img width="861" height="246" alt="image" src="https://github.com/user-attachments/assets/abce2007-7dfe-45f5-8541-548b6e5aa677" />
+
 - 单抽 / 十连
   <img width="1658" height="1496" alt="693197dfc6c63389289578e6b44ba81a" src="https://github.com/user-attachments/assets/0c20ee23-18b1-44eb-b074-77a5f833f25c" />
 - 道具进暂存箱或直发仓库
@@ -47,7 +49,7 @@ See the [LICENSE](LICENSE) file for details.
 
 - Monte Carlo 模拟（不同策略下达成目标道具的成本分布）
   <img width="1906" height="1518" alt="a85eb66916d2038f5817b8ac749b3893" src="https://github.com/user-attachments/assets/624abadd-4568-4acc-a19a-fbaf73b2bfdc" />
-  <img width="1664" height="1094" alt="5442203d2ec81e92891b3e0f59b88bc8" src="https://github.com/user-attachments/assets/eb4e9e4d-1a2f-407b-810a-14151857dbf4" />
+  <img width="1796" height="1306" alt="74e6fba1b6ba8bb6fe4686c00ab07f3c" src="https://github.com/user-attachments/assets/e7e85fe4-49a5-42fc-9e8c-1e4df7d49a74" />
 
 ---
 
