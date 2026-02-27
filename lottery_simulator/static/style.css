@@ -173,6 +173,11 @@ button.danger {
   border-color: #df8749;
 }
 
+.prize-card.palette-red {
+  border-color: #d63520;
+  color: #4c120c;
+}
+
 .prize-card.palette-purple {
   border-color: #8e44d4;
   color: #2a1747;
@@ -199,6 +204,10 @@ button.danger {
   padding: 8px;
 }
 
+.prize-card.palette-red .prize-top {
+  background: linear-gradient(180deg, #ff5a43 0%, #db2a16 100%);
+}
+
 .prize-card.palette-purple .prize-top {
   background: linear-gradient(180deg, #8f59e2 0%, #7a44c8 100%);
 }
@@ -218,6 +227,10 @@ button.danger {
   justify-content: center;
   background: #f3d8b2;
   padding: 6px 8px;
+}
+
+.prize-card.palette-red .prize-bottom {
+  background: #ffc1b9;
 }
 
 .prize-card.palette-purple .prize-bottom {
@@ -348,14 +361,18 @@ button.danger {
   position: absolute;
   z-index: 4;
   left: 8px;
+  right: 8px;
   top: 8px;
-  min-width: 230px;
+  max-width: calc(100% - 16px);
   background: #222;
   color: #fff;
   border-radius: 8px;
   padding: 10px;
   line-height: 1.45;
   font-size: 12px;
+  box-sizing: border-box;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .hover-wrap:hover .hover-pop {
@@ -490,6 +507,10 @@ button.danger {
   border-color: #df8749;
 }
 
+.redeem-card.palette-red {
+  border-color: #d63520;
+}
+
 .redeem-card.palette-purple {
   border-color: #8e44d4;
 }
@@ -544,6 +565,10 @@ button.danger {
   background: linear-gradient(180deg, #8f59e2 0%, #7a44c8 100%);
 }
 
+.redeem-card.palette-red .redeem-top {
+  background: linear-gradient(180deg, #ff5a43 0%, #db2a16 100%);
+}
+
 .redeem-card.palette-blue .redeem-top {
   background: linear-gradient(180deg, #4f93ff 0%, #367af0 100%);
 }
@@ -576,6 +601,10 @@ button.danger {
 
 .redeem-card.palette-purple .redeem-bottom {
   background: #c8b6ea;
+}
+
+.redeem-card.palette-red .redeem-bottom {
+  background: #ffc1b9;
 }
 
 .redeem-card.palette-blue .redeem-bottom {
@@ -886,6 +915,18 @@ button.danger {
 
 .result-item.palette-orange {
   border-color: #df8749;
+}
+
+.result-item.palette-red {
+  border-color: #d63520;
+}
+
+.result-item.palette-red .result-top {
+  background: linear-gradient(180deg, #ff5a43 0%, #db2a16 100%);
+}
+
+.result-item.palette-red .result-bottom {
+  background: #ffc1b9;
 }
 
 .result-item.palette-orange .result-top {

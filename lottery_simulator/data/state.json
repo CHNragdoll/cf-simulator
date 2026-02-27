@@ -1,134 +1,161 @@
 {
-  "money_spent": 2400,
+  "money_spent": 2000,
   "keys": 0,
-  "points": 1613,
-  "total_draws": 280,
+  "points": 660,
+  "total_draws": 220,
   "draw_counts": {
-    "6积分": 108,
-    "5积分": 99,
-    "王者之石×1": 16,
-    "8积分": 28,
-    "10积分": 14,
-    "C4-高无钳": 3,
-    "屠龙-荣耀之锋": 2,
-    "66积分": 1,
-    "20积分": 2,
-    "幻神-冠军之幻": 3,
-    "白虎-巅峰荣耀": 2,
-    "毁灭-荣耀之怒": 2
+    "6积分": 75,
+    "5积分": 89,
+    "7积分": 25,
+    "龙啸": 3,
+    "玄武投影": 4,
+    "王者之石×1": 11,
+    "龙啸-紫意 皮肤": 3,
+    "8积分": 5,
+    "M4A1-雷神": 1,
+    "雷神-紫意 皮肤": 3,
+    "传说艾丽莎": 1
   },
-  "redeem_counts": {},
-  "redeem_item_counts": {},
-  "decompose_counts": {
-    "屠龙-荣耀之锋": 2,
-    "幻神-冠军之幻": 1,
-    "C4-高无钳": 2
+  "redeem_counts": {
+    "龙啸": 1
   },
+  "redeem_item_counts": {
+    "longxiao": 1
+  },
+  "decompose_counts": {},
   "stash": {
-    "white_tiger_skin": 2,
-    "huanshen_champion": 2,
-    "destroy_glory": 2,
-    "c4_no_tool": 1
+    "longxiao": 3,
+    "xuanwu_projection": 4,
+    "longxiao_ziyi_skin": 3,
+    "m4a1_leishen": 1,
+    "leishen_ziyi_skin": 3,
+    "legend_elisha": 1
   },
   "stash_records": [
     {
       "record_id": 1,
-      "item_id": "c4_no_tool",
-      "name": "C4-高无钳",
-      "status": "decomposed",
-      "created_ts": 1771863474.8258939,
-      "action_ts": 1771863491.743556
+      "item_id": "longxiao",
+      "name": "龙啸",
+      "status": "pending",
+      "created_ts": 1772167683.8900821
     },
     {
       "record_id": 2,
-      "item_id": "c4_no_tool",
-      "name": "C4-高无钳",
-      "status": "decomposed",
-      "created_ts": 1771863476.741208,
-      "action_ts": 1771863491.189024
+      "item_id": "xuanwu_projection",
+      "name": "玄武投影",
+      "status": "pending",
+      "created_ts": 1772167686.951904
     },
     {
       "record_id": 3,
-      "item_id": "dragon_glory",
-      "name": "屠龙-荣耀之锋",
-      "status": "decomposed",
-      "created_ts": 1771863476.741271,
-      "action_ts": 1771863490.67389
+      "item_id": "longxiao_ziyi_skin",
+      "name": "龙啸-紫意 皮肤",
+      "status": "pending",
+      "created_ts": 1772167690.196437
     },
     {
       "record_id": 4,
-      "item_id": "huanshen_champion",
-      "name": "幻神-冠军之幻",
-      "status": "decomposed",
-      "created_ts": 1771863482.084979,
-      "action_ts": 1771863489.5786529
+      "item_id": "m4a1_leishen",
+      "name": "M4A1-雷神",
+      "status": "pending",
+      "created_ts": 1772167693.092831
     },
     {
       "record_id": 5,
-      "item_id": "dragon_glory",
-      "name": "屠龙-荣耀之锋",
-      "status": "decomposed",
-      "created_ts": 1771863483.376995,
-      "action_ts": 1771863489.052918
+      "item_id": "xuanwu_projection",
+      "name": "玄武投影",
+      "status": "pending",
+      "created_ts": 1772167694.0714722
     },
     {
       "record_id": 6,
-      "item_id": "white_tiger_skin",
-      "name": "白虎-巅峰荣耀",
+      "item_id": "longxiao_ziyi_skin",
+      "name": "龙啸-紫意 皮肤",
       "status": "pending",
-      "created_ts": 1771863511.3492758
+      "created_ts": 1772167697.59601
     },
     {
       "record_id": 7,
-      "item_id": "huanshen_champion",
-      "name": "幻神-冠军之幻",
+      "item_id": "longxiao_ziyi_skin",
+      "name": "龙啸-紫意 皮肤",
       "status": "pending",
-      "created_ts": 1771865374.251107
+      "created_ts": 1772167697.596064
     },
     {
       "record_id": 8,
-      "item_id": "huanshen_champion",
-      "name": "幻神-冠军之幻",
+      "item_id": "leishen_ziyi_skin",
+      "name": "雷神-紫意 皮肤",
       "status": "pending",
-      "created_ts": 1771865377.3723478
+      "created_ts": 1772167698.842505
     },
     {
       "record_id": 9,
-      "item_id": "destroy_glory",
-      "name": "毁灭-荣耀之怒",
+      "item_id": "xuanwu_projection",
+      "name": "玄武投影",
       "status": "pending",
-      "created_ts": 1771865377.372386
+      "created_ts": 1772167700.8005278
     },
     {
       "record_id": 10,
-      "item_id": "c4_no_tool",
-      "name": "C4-高无钳",
+      "item_id": "leishen_ziyi_skin",
+      "name": "雷神-紫意 皮肤",
       "status": "pending",
-      "created_ts": 1771865383.961766
+      "created_ts": 1772167704.233972
     },
     {
       "record_id": 11,
-      "item_id": "white_tiger_skin",
-      "name": "白虎-巅峰荣耀",
+      "item_id": "leishen_ziyi_skin",
+      "name": "雷神-紫意 皮肤",
       "status": "pending",
-      "created_ts": 1771865386.011192
+      "created_ts": 1772167705.521698
     },
     {
       "record_id": 12,
-      "item_id": "destroy_glory",
-      "name": "毁灭-荣耀之怒",
+      "item_id": "legend_elisha",
+      "name": "传说艾丽莎",
       "status": "pending",
-      "created_ts": 1771865388.575897
+      "created_ts": 1772167705.521777
+    },
+    {
+      "record_id": 13,
+      "item_id": "longxiao",
+      "name": "龙啸",
+      "status": "pending",
+      "created_ts": 1772168421.392757
+    },
+    {
+      "record_id": 14,
+      "item_id": "xuanwu_projection",
+      "name": "玄武投影",
+      "status": "pending",
+      "created_ts": 1772168421.3927748
+    },
+    {
+      "record_id": 15,
+      "item_id": "longxiao",
+      "name": "龙啸",
+      "status": "pending",
+      "created_ts": 1772168431.686634
     }
   ],
-  "stash_record_seq": 12,
+  "stash_record_seq": 15,
   "warehouse": {
-    "king_stone": 16
+    "king_stone": 11,
+    "longxiao": 1
   },
   "warehouse_draw": {
-    "king_stone": 16
+    "king_stone": 11
   },
-  "redeem_logs": [],
+  "redeem_logs": [
+    {
+      "ts": 1772170036.5099719,
+      "item_id": "longxiao",
+      "name": "龙啸",
+      "qty": 1,
+      "cost": 450,
+      "source": "redeem"
+    }
+  ],
   "history": [
     {
       "type": "points",
@@ -136,16 +163,16 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863473.8102632,
+      "ts": 1772167683.890008,
       "draw_index": 1
     },
     {
       "type": "points",
-      "name": "5积分",
-      "points": 5,
+      "name": "6积分",
+      "points": 6,
       "group": "积分",
-      "child": "5积分",
-      "ts": 1771863473.8102999,
+      "child": "6积分",
+      "ts": 1772167683.890031,
       "draw_index": 2
     },
     {
@@ -154,20 +181,16 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863473.810312,
+      "ts": 1772167683.890042,
       "draw_index": 3
     },
     {
-      "type": "item",
-      "id": "king_stone",
-      "name": "王者之石×1",
-      "destination": "warehouse",
-      "decompose_points": 0,
-      "decompose_keys": 0,
-      "exchange_points": 0,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "ts": 1771863473.810343,
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772167683.890052,
       "draw_index": 4
     },
     {
@@ -176,25 +199,29 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863473.810354,
+      "ts": 1772167683.8900611,
       "draw_index": 5
     },
     {
       "type": "points",
-      "name": "5积分",
-      "points": 5,
+      "name": "7积分",
+      "points": 7,
       "group": "积分",
-      "child": "5积分",
-      "ts": 1771863473.810368,
+      "child": "7积分",
+      "ts": 1772167683.8900712,
       "draw_index": 6
     },
     {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771863473.810387,
+      "type": "item",
+      "id": "longxiao",
+      "name": "龙啸",
+      "destination": "stash",
+      "decompose_points": 45,
+      "decompose_keys": 0,
+      "exchange_points": 450,
+      "image_url": "/images/dhdj10_87dfdc4d4e.png",
+      "popup_image_url": "/images/dhdj10_87dfdc4d4e.png",
+      "ts": 1772167683.8900979,
       "draw_index": 7
     },
     {
@@ -203,16 +230,16 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863473.810397,
+      "ts": 1772167683.8901088,
       "draw_index": 8
     },
     {
       "type": "points",
-      "name": "5积分",
-      "points": 5,
+      "name": "7积分",
+      "points": 7,
       "group": "积分",
-      "child": "5积分",
-      "ts": 1771863473.810411,
+      "child": "7积分",
+      "ts": 1772167683.890118,
       "draw_index": 9
     },
     {
@@ -221,8 +248,21 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863473.810421,
+      "ts": 1772167683.8901272,
       "draw_index": 10
+    },
+    {
+      "type": "item",
+      "id": "xuanwu_projection",
+      "name": "玄武投影",
+      "destination": "stash",
+      "decompose_points": 30,
+      "decompose_keys": 0,
+      "exchange_points": 300,
+      "image_url": "/images/dhdj11_2dcf084298.png",
+      "popup_image_url": "/images/dhdj11_2dcf084298.png",
+      "ts": 1772167686.951908,
+      "draw_index": 11
     },
     {
       "type": "points",
@@ -230,8 +270,8 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863474.8258739,
-      "draw_index": 11
+      "ts": 1772167686.951922,
+      "draw_index": 12
     },
     {
       "type": "points",
@@ -239,25 +279,16 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863474.825877,
-      "draw_index": 12
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771863474.82588,
+      "ts": 1772167686.951932,
       "draw_index": 13
     },
     {
       "type": "points",
-      "name": "8积分",
-      "points": 8,
+      "name": "6积分",
+      "points": 6,
       "group": "积分",
-      "child": "8积分",
-      "ts": 1771863474.8258822,
+      "child": "6积分",
+      "ts": 1772167686.951939,
       "draw_index": 14
     },
     {
@@ -266,7 +297,7 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863474.8258839,
+      "ts": 1772167686.951946,
       "draw_index": 15
     },
     {
@@ -275,7 +306,7 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863474.825887,
+      "ts": 1772167686.951954,
       "draw_index": 16
     },
     {
@@ -284,29 +315,25 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863474.825889,
+      "ts": 1772167686.951961,
       "draw_index": 17
     },
     {
       "type": "points",
-      "name": "10积分",
-      "points": 10,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "10积分",
-      "ts": 1771863474.825891,
+      "child": "5积分",
+      "ts": 1772167686.951968,
       "draw_index": 18
     },
     {
-      "type": "item",
-      "id": "c4_no_tool",
-      "name": "C4-高无钳",
-      "destination": "stash",
-      "decompose_points": 0,
-      "decompose_keys": 1,
-      "exchange_points": 168,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/part3_porp_img10.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot9.png",
-      "ts": 1771863474.8258948,
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772167686.95198,
       "draw_index": 19
     },
     {
@@ -315,66 +342,17 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863474.825898,
+      "ts": 1772167686.9519858,
       "draw_index": 20
     },
     {
-      "type": "item",
-      "id": "c4_no_tool",
-      "name": "C4-高无钳",
-      "destination": "stash",
-      "decompose_points": 0,
-      "decompose_keys": 1,
-      "exchange_points": 168,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/part3_porp_img10.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot9.png",
-      "ts": 1771863476.741212,
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772167688.1985228,
       "draw_index": 21
-    },
-    {
-      "type": "points",
-      "name": "8积分",
-      "points": 8,
-      "group": "积分",
-      "child": "8积分",
-      "ts": 1771863476.741226,
-      "draw_index": 22
-    },
-    {
-      "type": "points",
-      "name": "8积分",
-      "points": 8,
-      "group": "积分",
-      "child": "8积分",
-      "ts": 1771863476.741238,
-      "draw_index": 23
-    },
-    {
-      "type": "points",
-      "name": "10积分",
-      "points": 10,
-      "group": "积分",
-      "child": "10积分",
-      "ts": 1771863476.7412438,
-      "draw_index": 24
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771863476.74125,
-      "draw_index": 25
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771863476.7412548,
-      "draw_index": 26
     },
     {
       "type": "points",
@@ -382,8 +360,71 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863476.741261,
+      "ts": 1772167688.1985412,
+      "draw_index": 22
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167688.198555,
+      "draw_index": 23
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167688.1985679,
+      "draw_index": 24
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167688.198578,
+      "draw_index": 25
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167688.1985888,
+      "draw_index": 26
+    },
+    {
+      "type": "points",
+      "name": "7积分",
+      "points": 7,
+      "group": "积分",
+      "child": "7积分",
+      "ts": 1772167688.1985989,
       "draw_index": 27
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167688.198608,
+      "draw_index": 28
+    },
+    {
+      "type": "points",
+      "name": "7积分",
+      "points": 7,
+      "group": "积分",
+      "child": "7积分",
+      "ts": 1772167688.198617,
+      "draw_index": 29
     },
     {
       "type": "points",
@@ -391,29 +432,7 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863476.741267,
-      "draw_index": 28
-    },
-    {
-      "type": "item",
-      "id": "dragon_glory",
-      "name": "屠龙-荣耀之锋",
-      "destination": "stash",
-      "decompose_points": 0,
-      "decompose_keys": 2,
-      "exchange_points": 228,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/part3_porp_img9.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot8.png",
-      "ts": 1771863476.7412732,
-      "draw_index": 29
-    },
-    {
-      "type": "points",
-      "name": "8积分",
-      "points": 8,
-      "group": "积分",
-      "child": "8积分",
-      "ts": 1771863476.741278,
+      "ts": 1772167688.198627,
       "draw_index": 30
     },
     {
@@ -422,16 +441,16 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863478.124257,
+      "ts": 1772167689.177939,
       "draw_index": 31
     },
     {
       "type": "points",
-      "name": "8积分",
-      "points": 8,
+      "name": "6积分",
+      "points": 6,
       "group": "积分",
-      "child": "8积分",
-      "ts": 1771863478.1242619,
+      "child": "6积分",
+      "ts": 1772167689.177943,
       "draw_index": 32
     },
     {
@@ -440,17 +459,8 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863478.124265,
+      "ts": 1772167689.1779451,
       "draw_index": 33
-    },
-    {
-      "type": "points",
-      "name": "66积分",
-      "points": 66,
-      "group": "积分",
-      "child": "66积分",
-      "ts": 1771863478.124267,
-      "draw_index": 34
     },
     {
       "type": "points",
@@ -458,7 +468,16 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863478.12427,
+      "ts": 1772167689.1779468,
+      "draw_index": 34
+    },
+    {
+      "type": "points",
+      "name": "7积分",
+      "points": 7,
+      "group": "积分",
+      "child": "7积分",
+      "ts": 1772167689.17795,
       "draw_index": 35
     },
     {
@@ -467,7 +486,7 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863478.124272,
+      "ts": 1772167689.177952,
       "draw_index": 36
     },
     {
@@ -476,7 +495,7 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863478.124274,
+      "ts": 1772167689.177954,
       "draw_index": 37
     },
     {
@@ -485,7 +504,7 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863478.124276,
+      "ts": 1772167689.177956,
       "draw_index": 38
     },
     {
@@ -494,35 +513,8 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863478.124279,
+      "ts": 1772167689.177959,
       "draw_index": 39
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863478.1242812,
-      "draw_index": 40
-    },
-    {
-      "type": "points",
-      "name": "10积分",
-      "points": 10,
-      "group": "积分",
-      "child": "10积分",
-      "ts": 1771863479.167708,
-      "draw_index": 41
-    },
-    {
-      "type": "points",
-      "name": "20积分",
-      "points": 20,
-      "group": "积分",
-      "child": "20积分",
-      "ts": 1771863479.167727,
-      "draw_index": 42
     },
     {
       "type": "points",
@@ -530,7 +522,42 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863479.1677382,
+      "ts": 1772167689.1779609,
+      "draw_index": 40
+    },
+    {
+      "type": "item",
+      "id": "king_stone",
+      "name": "王者之石×1",
+      "destination": "warehouse",
+      "decompose_points": 0,
+      "decompose_keys": 0,
+      "exchange_points": 0,
+      "image_url": "/cf_images/lot/lot10.png",
+      "popup_image_url": "/cf_images/lot/lot10.png",
+      "ts": 1772167690.196428,
+      "draw_index": 41
+    },
+    {
+      "type": "item",
+      "id": "longxiao_ziyi_skin",
+      "name": "龙啸-紫意 皮肤",
+      "destination": "stash",
+      "decompose_points": 70,
+      "decompose_keys": 0,
+      "exchange_points": 700,
+      "image_url": "/images/dhdj7_cff238656c.png",
+      "popup_image_url": "/images/dhdj7_cff238656c.png",
+      "ts": 1772167690.19644,
+      "draw_index": 42
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167690.1964512,
       "draw_index": 43
     },
     {
@@ -539,38 +566,34 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863479.1677482,
+      "ts": 1772167690.196459,
       "draw_index": 44
     },
     {
-      "type": "item",
-      "id": "king_stone",
-      "name": "王者之石×1",
-      "destination": "warehouse",
-      "decompose_points": 0,
-      "decompose_keys": 0,
-      "exchange_points": 0,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "ts": 1771863479.167758,
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772167690.196467,
       "draw_index": 45
     },
     {
       "type": "points",
-      "name": "5积分",
-      "points": 5,
+      "name": "6积分",
+      "points": 6,
       "group": "积分",
-      "child": "5积分",
-      "ts": 1771863479.167768,
+      "child": "6积分",
+      "ts": 1772167690.196474,
       "draw_index": 46
     },
     {
       "type": "points",
-      "name": "5积分",
-      "points": 5,
+      "name": "7积分",
+      "points": 7,
       "group": "积分",
-      "child": "5积分",
-      "ts": 1771863479.167778,
+      "child": "7积分",
+      "ts": 1772167690.196481,
       "draw_index": 47
     },
     {
@@ -579,7 +602,7 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863479.167788,
+      "ts": 1772167690.196488,
       "draw_index": 48
     },
     {
@@ -588,179 +611,26 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863479.167797,
+      "ts": 1772167690.1964958,
       "draw_index": 49
     },
     {
       "type": "points",
-      "name": "6积分",
-      "points": 6,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "6积分",
-      "ts": 1771863479.167806,
+      "child": "5积分",
+      "ts": 1772167690.196503,
       "draw_index": 50
     },
     {
       "type": "points",
-      "name": "6积分",
-      "points": 6,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "6积分",
-      "ts": 1771863480.244899,
+      "child": "5积分",
+      "ts": 1772167691.1830149,
       "draw_index": 51
-    },
-    {
-      "type": "points",
-      "name": "20积分",
-      "points": 20,
-      "group": "积分",
-      "child": "20积分",
-      "ts": 1771863480.244906,
-      "draw_index": 52
-    },
-    {
-      "type": "points",
-      "name": "8积分",
-      "points": 8,
-      "group": "积分",
-      "child": "8积分",
-      "ts": 1771863480.2449112,
-      "draw_index": 53
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863480.244917,
-      "draw_index": 54
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863480.2449222,
-      "draw_index": 55
-    },
-    {
-      "type": "points",
-      "name": "10积分",
-      "points": 10,
-      "group": "积分",
-      "child": "10积分",
-      "ts": 1771863480.244931,
-      "draw_index": 56
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771863480.244936,
-      "draw_index": 57
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863480.244941,
-      "draw_index": 58
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771863480.244946,
-      "draw_index": 59
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771863480.244951,
-      "draw_index": 60
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771863481.178273,
-      "draw_index": 61
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863481.178287,
-      "draw_index": 62
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863481.178297,
-      "draw_index": 63
-    },
-    {
-      "type": "points",
-      "name": "8积分",
-      "points": 8,
-      "group": "积分",
-      "child": "8积分",
-      "ts": 1771863481.178306,
-      "draw_index": 64
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863481.178315,
-      "draw_index": 65
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863481.1783261,
-      "draw_index": 66
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863481.178336,
-      "draw_index": 67
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863481.178345,
-      "draw_index": 68
     },
     {
       "type": "item",
@@ -770,40 +640,189 @@
       "decompose_points": 0,
       "decompose_keys": 0,
       "exchange_points": 0,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "ts": 1771863481.178356,
+      "image_url": "/cf_images/lot/lot10.png",
+      "popup_image_url": "/cf_images/lot/lot10.png",
+      "ts": 1772167691.183032,
+      "draw_index": 52
+    },
+    {
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772167691.1830442,
+      "draw_index": 53
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167691.1830552,
+      "draw_index": 54
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167691.1830652,
+      "draw_index": 55
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167691.1830752,
+      "draw_index": 56
+    },
+    {
+      "type": "points",
+      "name": "7积分",
+      "points": 7,
+      "group": "积分",
+      "child": "7积分",
+      "ts": 1772167691.183084,
+      "draw_index": 57
+    },
+    {
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772167691.183094,
+      "draw_index": 58
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167691.183103,
+      "draw_index": 59
+    },
+    {
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772167691.183114,
+      "draw_index": 60
+    },
+    {
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772167692.153482,
+      "draw_index": 61
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167692.153497,
+      "draw_index": 62
+    },
+    {
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772167692.1535082,
+      "draw_index": 63
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167692.153518,
+      "draw_index": 64
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167692.153528,
+      "draw_index": 65
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167692.1535401,
+      "draw_index": 66
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167692.1535501,
+      "draw_index": 67
+    },
+    {
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772167692.1535602,
+      "draw_index": 68
+    },
+    {
+      "type": "points",
+      "name": "8积分",
+      "points": 8,
+      "group": "积分",
+      "child": "8积分",
+      "ts": 1772167692.15357,
       "draw_index": 69
     },
     {
       "type": "points",
-      "name": "5积分",
-      "points": 5,
+      "name": "7积分",
+      "points": 7,
       "group": "积分",
-      "child": "5积分",
-      "ts": 1771863481.178366,
+      "child": "7积分",
+      "ts": 1772167692.15358,
       "draw_index": 70
     },
     {
       "type": "points",
-      "name": "5积分",
-      "points": 5,
+      "name": "6积分",
+      "points": 6,
       "group": "积分",
-      "child": "5积分",
-      "ts": 1771863482.0849721,
+      "child": "6积分",
+      "ts": 1772167693.092739,
       "draw_index": 71
     },
     {
-      "type": "item",
-      "id": "huanshen_champion",
-      "name": "幻神-冠军之幻",
-      "destination": "stash",
-      "decompose_points": 0,
-      "decompose_keys": 10,
-      "exchange_points": 1188,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/part3_porp_img3.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot2.png",
-      "ts": 1771863482.084982,
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167693.09276,
       "draw_index": 72
     },
     {
@@ -812,44 +831,35 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863482.0849888,
+      "ts": 1772167693.092771,
       "draw_index": 73
     },
     {
       "type": "points",
-      "name": "5积分",
-      "points": 5,
+      "name": "7积分",
+      "points": 7,
       "group": "积分",
-      "child": "5积分",
-      "ts": 1771863482.084995,
+      "child": "7积分",
+      "ts": 1772167693.09278,
       "draw_index": 74
     },
     {
       "type": "points",
-      "name": "5积分",
-      "points": 5,
+      "name": "6积分",
+      "points": 6,
       "group": "积分",
-      "child": "5积分",
-      "ts": 1771863482.085001,
+      "child": "6积分",
+      "ts": 1772167693.092789,
       "draw_index": 75
     },
     {
       "type": "points",
-      "name": "6积分",
-      "points": 6,
+      "name": "8积分",
+      "points": 8,
       "group": "积分",
-      "child": "6积分",
-      "ts": 1771863482.0850072,
+      "child": "8积分",
+      "ts": 1772167693.0928,
       "draw_index": 76
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863482.085013,
-      "draw_index": 77
     },
     {
       "type": "points",
@@ -857,47 +867,56 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863482.0850198,
+      "ts": 1772167693.092811,
+      "draw_index": 77
+    },
+    {
+      "type": "item",
+      "id": "m4a1_leishen",
+      "name": "M4A1-雷神",
+      "destination": "stash",
+      "decompose_points": 55,
+      "decompose_keys": 0,
+      "exchange_points": 550,
+      "image_url": "/images/dhdj9_75df578690.png",
+      "popup_image_url": "/images/dhdj9_75df578690.png",
+      "ts": 1772167693.092841,
       "draw_index": 78
     },
     {
       "type": "points",
-      "name": "6积分",
-      "points": 6,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "6积分",
-      "ts": 1771863482.085025,
+      "child": "5积分",
+      "ts": 1772167693.0928519,
       "draw_index": 79
     },
     {
       "type": "points",
-      "name": "10积分",
-      "points": 10,
+      "name": "7积分",
+      "points": 7,
       "group": "积分",
-      "child": "10积分",
-      "ts": 1771863482.0850308,
+      "child": "7积分",
+      "ts": 1772167693.092862,
       "draw_index": 80
     },
     {
       "type": "points",
-      "name": "6积分",
-      "points": 6,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "6积分",
-      "ts": 1771863483.376985,
+      "child": "5积分",
+      "ts": 1772167694.071435,
       "draw_index": 81
     },
     {
-      "type": "item",
-      "id": "dragon_glory",
-      "name": "屠龙-荣耀之锋",
-      "destination": "stash",
-      "decompose_points": 0,
-      "decompose_keys": 2,
-      "exchange_points": 228,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/part3_porp_img9.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot8.png",
-      "ts": 1771863483.3769972,
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772167694.071442,
       "draw_index": 82
     },
     {
@@ -906,35 +925,8 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863483.3770041,
+      "ts": 1772167694.071448,
       "draw_index": 83
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863483.377011,
-      "draw_index": 84
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863483.37702,
-      "draw_index": 85
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863483.377026,
-      "draw_index": 86
     },
     {
       "type": "points",
@@ -942,16 +934,51 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863483.3770308,
+      "ts": 1772167694.0714529,
+      "draw_index": 84
+    },
+    {
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772167694.071458,
+      "draw_index": 85
+    },
+    {
+      "type": "item",
+      "id": "king_stone",
+      "name": "王者之石×1",
+      "destination": "warehouse",
+      "decompose_points": 0,
+      "decompose_keys": 0,
+      "exchange_points": 0,
+      "image_url": "/cf_images/lot/lot10.png",
+      "popup_image_url": "/cf_images/lot/lot10.png",
+      "ts": 1772167694.071465,
+      "draw_index": 86
+    },
+    {
+      "type": "item",
+      "id": "xuanwu_projection",
+      "name": "玄武投影",
+      "destination": "stash",
+      "decompose_points": 30,
+      "decompose_keys": 0,
+      "exchange_points": 300,
+      "image_url": "/images/dhdj11_2dcf084298.png",
+      "popup_image_url": "/images/dhdj11_2dcf084298.png",
+      "ts": 1772167694.0714738,
       "draw_index": 87
     },
     {
       "type": "points",
-      "name": "6积分",
-      "points": 6,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "6积分",
-      "ts": 1771863483.377036,
+      "child": "5积分",
+      "ts": 1772167694.07148,
       "draw_index": 88
     },
     {
@@ -960,7 +987,7 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863483.3770418,
+      "ts": 1772167694.071485,
       "draw_index": 89
     },
     {
@@ -971,9 +998,9 @@
       "decompose_points": 0,
       "decompose_keys": 0,
       "exchange_points": 0,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "ts": 1771863483.3770509,
+      "image_url": "/cf_images/lot/lot10.png",
+      "popup_image_url": "/cf_images/lot/lot10.png",
+      "ts": 1772167694.0714931,
       "draw_index": 90
     },
     {
@@ -982,38 +1009,34 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863484.574496,
+      "ts": 1772167695.088991,
       "draw_index": 91
     },
     {
-      "type": "item",
-      "id": "king_stone",
-      "name": "王者之石×1",
-      "destination": "warehouse",
-      "decompose_points": 0,
-      "decompose_keys": 0,
-      "exchange_points": 0,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "ts": 1771863484.574504,
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167695.089004,
       "draw_index": 92
     },
     {
       "type": "points",
-      "name": "6积分",
-      "points": 6,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "6积分",
-      "ts": 1771863484.574511,
+      "child": "5积分",
+      "ts": 1772167695.089014,
       "draw_index": 93
     },
     {
       "type": "points",
-      "name": "6积分",
-      "points": 6,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "6积分",
-      "ts": 1771863484.574517,
+      "child": "5积分",
+      "ts": 1772167695.089025,
       "draw_index": 94
     },
     {
@@ -1022,7 +1045,7 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863484.574523,
+      "ts": 1772167695.089035,
       "draw_index": 95
     },
     {
@@ -1031,7 +1054,7 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863484.574529,
+      "ts": 1772167695.0890439,
       "draw_index": 96
     },
     {
@@ -1040,16 +1063,16 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863484.574535,
+      "ts": 1772167695.089053,
       "draw_index": 97
     },
     {
       "type": "points",
-      "name": "5积分",
-      "points": 5,
+      "name": "7积分",
+      "points": 7,
       "group": "积分",
-      "child": "5积分",
-      "ts": 1771863484.574541,
+      "child": "7积分",
+      "ts": 1772167695.089062,
       "draw_index": 98
     },
     {
@@ -1058,53 +1081,8 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863484.5745459,
+      "ts": 1772167695.0890722,
       "draw_index": 99
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863484.574552,
-      "draw_index": 100
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863485.6853929,
-      "draw_index": 101
-    },
-    {
-      "type": "points",
-      "name": "10积分",
-      "points": 10,
-      "group": "积分",
-      "child": "10积分",
-      "ts": 1771863485.6854,
-      "draw_index": 102
-    },
-    {
-      "type": "points",
-      "name": "8积分",
-      "points": 8,
-      "group": "积分",
-      "child": "8积分",
-      "ts": 1771863485.685405,
-      "draw_index": 103
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863485.68541,
-      "draw_index": 104
     },
     {
       "type": "points",
@@ -1112,7 +1090,56 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863485.685415,
+      "ts": 1772167695.089081,
+      "draw_index": 100
+    },
+    {
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772167696.445963,
+      "draw_index": 101
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167696.445968,
+      "draw_index": 102
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167696.445971,
+      "draw_index": 103
+    },
+    {
+      "type": "item",
+      "id": "king_stone",
+      "name": "王者之石×1",
+      "destination": "warehouse",
+      "decompose_points": 0,
+      "decompose_keys": 0,
+      "exchange_points": 0,
+      "image_url": "/cf_images/lot/lot10.png",
+      "popup_image_url": "/cf_images/lot/lot10.png",
+      "ts": 1772167696.445976,
+      "draw_index": 104
+    },
+    {
+      "type": "points",
+      "name": "7积分",
+      "points": 7,
+      "group": "积分",
+      "child": "7积分",
+      "ts": 1772167696.4459789,
       "draw_index": 105
     },
     {
@@ -1121,53 +1148,8 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863485.68542,
+      "ts": 1772167696.445982,
       "draw_index": 106
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863485.6854248,
-      "draw_index": 107
-    },
-    {
-      "type": "points",
-      "name": "10积分",
-      "points": 10,
-      "group": "积分",
-      "child": "10积分",
-      "ts": 1771863485.68543,
-      "draw_index": 108
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863485.6854348,
-      "draw_index": 109
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863485.685441,
-      "draw_index": 110
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863494.228309,
-      "draw_index": 111
     },
     {
       "type": "points",
@@ -1175,8 +1157,8 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863494.2283268,
-      "draw_index": 112
+      "ts": 1772167696.445985,
+      "draw_index": 107
     },
     {
       "type": "points",
@@ -1184,17 +1166,17 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863494.228333,
-      "draw_index": 113
+      "ts": 1772167696.445987,
+      "draw_index": 108
     },
     {
       "type": "points",
-      "name": "10积分",
-      "points": 10,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "10积分",
-      "ts": 1771863494.228339,
-      "draw_index": 114
+      "child": "5积分",
+      "ts": 1772167696.4459898,
+      "draw_index": 109
     },
     {
       "type": "item",
@@ -1204,91 +1186,147 @@
       "decompose_points": 0,
       "decompose_keys": 0,
       "exchange_points": 0,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "ts": 1771863494.228352,
+      "image_url": "/cf_images/lot/lot10.png",
+      "popup_image_url": "/cf_images/lot/lot10.png",
+      "ts": 1772167696.446002,
+      "draw_index": 110
+    },
+    {
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772167697.5959911,
+      "draw_index": 111
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167697.596003,
+      "draw_index": 112
+    },
+    {
+      "type": "item",
+      "id": "longxiao_ziyi_skin",
+      "name": "龙啸-紫意 皮肤",
+      "destination": "stash",
+      "decompose_points": 70,
+      "decompose_keys": 0,
+      "exchange_points": 700,
+      "image_url": "/images/dhdj7_cff238656c.png",
+      "popup_image_url": "/images/dhdj7_cff238656c.png",
+      "ts": 1772167697.596014,
+      "draw_index": 113
+    },
+    {
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772167697.596023,
+      "draw_index": 114
+    },
+    {
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772167697.59603,
       "draw_index": 115
     },
     {
       "type": "points",
-      "name": "5积分",
-      "points": 5,
+      "name": "6积分",
+      "points": 6,
       "group": "积分",
-      "child": "5积分",
-      "ts": 1771863494.2283578,
+      "child": "6积分",
+      "ts": 1772167697.5960379,
       "draw_index": 116
     },
     {
       "type": "points",
-      "name": "5积分",
-      "points": 5,
+      "name": "7积分",
+      "points": 7,
       "group": "积分",
-      "child": "5积分",
-      "ts": 1771863494.228363,
+      "child": "7积分",
+      "ts": 1772167697.596045,
       "draw_index": 117
     },
     {
       "type": "points",
-      "name": "5积分",
-      "points": 5,
+      "name": "7积分",
+      "points": 7,
       "group": "积分",
-      "child": "5积分",
-      "ts": 1771863494.228369,
+      "child": "7积分",
+      "ts": 1772167697.596051,
       "draw_index": 118
     },
     {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771863494.228374,
+      "type": "item",
+      "id": "king_stone",
+      "name": "王者之石×1",
+      "destination": "warehouse",
+      "decompose_points": 0,
+      "decompose_keys": 0,
+      "exchange_points": 0,
+      "image_url": "/cf_images/lot/lot10.png",
+      "popup_image_url": "/cf_images/lot/lot10.png",
+      "ts": 1772167697.5960588,
       "draw_index": 119
     },
     {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771863494.22838,
+      "type": "item",
+      "id": "longxiao_ziyi_skin",
+      "name": "龙啸-紫意 皮肤",
+      "destination": "stash",
+      "decompose_points": 70,
+      "decompose_keys": 0,
+      "exchange_points": 700,
+      "image_url": "/images/dhdj7_cff238656c.png",
+      "popup_image_url": "/images/dhdj7_cff238656c.png",
+      "ts": 1772167697.596065,
       "draw_index": 120
     },
     {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863496.6006851,
+      "type": "item",
+      "id": "leishen_ziyi_skin",
+      "name": "雷神-紫意 皮肤",
+      "destination": "stash",
+      "decompose_points": 70,
+      "decompose_keys": 0,
+      "exchange_points": 700,
+      "image_url": "/images/dhdj6_e786a708f7.png",
+      "popup_image_url": "/images/dhdj6_e786a708f7.png",
+      "ts": 1772167698.84251,
       "draw_index": 121
     },
     {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863498.760823,
+      "type": "item",
+      "id": "king_stone",
+      "name": "王者之石×1",
+      "destination": "warehouse",
+      "decompose_points": 0,
+      "decompose_keys": 0,
+      "exchange_points": 0,
+      "image_url": "/cf_images/lot/lot10.png",
+      "popup_image_url": "/cf_images/lot/lot10.png",
+      "ts": 1772167698.842518,
       "draw_index": 122
     },
     {
       "type": "points",
-      "name": "5积分",
-      "points": 5,
+      "name": "7积分",
+      "points": 7,
       "group": "积分",
-      "child": "5积分",
-      "ts": 1771863500.281642,
+      "child": "7积分",
+      "ts": 1772167698.84253,
       "draw_index": 123
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771863502.3110871,
-      "draw_index": 124
     },
     {
       "type": "points",
@@ -1296,17 +1334,8 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863503.738963,
-      "draw_index": 125
-    },
-    {
-      "type": "points",
-      "name": "8积分",
-      "points": 8,
-      "group": "积分",
-      "child": "8积分",
-      "ts": 1771863505.447305,
-      "draw_index": 126
+      "ts": 1772167698.842536,
+      "draw_index": 124
     },
     {
       "type": "points",
@@ -1314,7 +1343,25 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863509.682011,
+      "ts": 1772167698.842541,
+      "draw_index": 125
+    },
+    {
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772167698.842547,
+      "draw_index": 126
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167698.842552,
       "draw_index": 127
     },
     {
@@ -1323,7 +1370,7 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863509.6820202,
+      "ts": 1772167698.842558,
       "draw_index": 128
     },
     {
@@ -1332,7 +1379,7 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863509.682026,
+      "ts": 1772167698.8425632,
       "draw_index": 129
     },
     {
@@ -1341,34 +1388,42 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863509.682032,
+      "ts": 1772167698.842583,
       "draw_index": 130
     },
     {
       "type": "points",
-      "name": "8积分",
-      "points": 8,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "8积分",
-      "ts": 1771863509.6820369,
+      "child": "5积分",
+      "ts": 1772167700.8005178,
       "draw_index": 131
     },
     {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771863509.6820428,
+      "type": "item",
+      "id": "xuanwu_projection",
+      "name": "玄武投影",
+      "destination": "stash",
+      "decompose_points": 30,
+      "decompose_keys": 0,
+      "exchange_points": 300,
+      "image_url": "/images/dhdj11_2dcf084298.png",
+      "popup_image_url": "/images/dhdj11_2dcf084298.png",
+      "ts": 1772167700.800533,
       "draw_index": 132
     },
     {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771863509.682048,
+      "type": "item",
+      "id": "king_stone",
+      "name": "王者之石×1",
+      "destination": "warehouse",
+      "decompose_points": 0,
+      "decompose_keys": 0,
+      "exchange_points": 0,
+      "image_url": "/cf_images/lot/lot10.png",
+      "popup_image_url": "/cf_images/lot/lot10.png",
+      "ts": 1772167700.8005388,
       "draw_index": 133
     },
     {
@@ -1377,16 +1432,16 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863509.682053,
+      "ts": 1772167700.800546,
       "draw_index": 134
     },
     {
       "type": "points",
-      "name": "5积分",
-      "points": 5,
+      "name": "6积分",
+      "points": 6,
       "group": "积分",
-      "child": "5积分",
-      "ts": 1771863509.682059,
+      "child": "6积分",
+      "ts": 1772167700.800552,
       "draw_index": 135
     },
     {
@@ -1395,16 +1450,16 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863509.6820638,
+      "ts": 1772167700.8005571,
       "draw_index": 136
     },
     {
       "type": "points",
-      "name": "6积分",
-      "points": 6,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "6积分",
-      "ts": 1771863511.349251,
+      "child": "5积分",
+      "ts": 1772167700.8005629,
       "draw_index": 137
     },
     {
@@ -1413,30 +1468,8 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863511.349267,
+      "ts": 1772167700.800568,
       "draw_index": 138
-    },
-    {
-      "type": "item",
-      "id": "white_tiger_skin",
-      "name": "白虎-巅峰荣耀",
-      "destination": "stash",
-      "decompose_points": 0,
-      "decompose_keys": 6,
-      "exchange_points": 768,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/part3_porp_img6.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot5.png",
-      "ts": 1771863511.349282,
-      "draw_index": 139
-    },
-    {
-      "type": "points",
-      "name": "8积分",
-      "points": 8,
-      "group": "积分",
-      "child": "8积分",
-      "ts": 1771863511.349323,
-      "draw_index": 140
     },
     {
       "type": "points",
@@ -1444,8 +1477,8 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863511.349333,
-      "draw_index": 141
+      "ts": 1772167700.800574,
+      "draw_index": 139
     },
     {
       "type": "points",
@@ -1453,7 +1486,25 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863511.349347,
+      "ts": 1772167700.800579,
+      "draw_index": 140
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167701.875052,
+      "draw_index": 141
+    },
+    {
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772167701.875063,
       "draw_index": 142
     },
     {
@@ -1462,17 +1513,8 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863511.349356,
+      "ts": 1772167701.875071,
       "draw_index": 143
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771863511.349366,
-      "draw_index": 144
     },
     {
       "type": "points",
@@ -1480,7 +1522,16 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863511.34938,
+      "ts": 1772167701.875078,
+      "draw_index": 144
+    },
+    {
+      "type": "points",
+      "name": "7积分",
+      "points": 7,
+      "group": "积分",
+      "child": "7积分",
+      "ts": 1772167701.875088,
       "draw_index": 145
     },
     {
@@ -1489,30 +1540,17 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863511.3493912,
+      "ts": 1772167701.875096,
       "draw_index": 146
     },
     {
-      "type": "item",
-      "id": "king_stone",
-      "name": "王者之石×1",
-      "destination": "warehouse",
-      "decompose_points": 0,
-      "decompose_keys": 0,
-      "exchange_points": 0,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "ts": 1771863544.367,
-      "draw_index": 147
-    },
-    {
       "type": "points",
-      "name": "10积分",
-      "points": 10,
+      "name": "7积分",
+      "points": 7,
       "group": "积分",
-      "child": "10积分",
-      "ts": 1771863544.3670442,
-      "draw_index": 148
+      "child": "7积分",
+      "ts": 1772167701.875104,
+      "draw_index": 147
     },
     {
       "type": "points",
@@ -1520,7 +1558,16 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863544.367058,
+      "ts": 1772167701.875178,
+      "draw_index": 148
+    },
+    {
+      "type": "points",
+      "name": "7积分",
+      "points": 7,
+      "group": "积分",
+      "child": "7积分",
+      "ts": 1772167701.8751879,
       "draw_index": 149
     },
     {
@@ -1529,16 +1576,16 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863544.367079,
+      "ts": 1772167701.875221,
       "draw_index": 150
     },
     {
       "type": "points",
-      "name": "5积分",
-      "points": 5,
+      "name": "6积分",
+      "points": 6,
       "group": "积分",
-      "child": "5积分",
-      "ts": 1771863544.3670888,
+      "child": "6积分",
+      "ts": 1772167703.147208,
       "draw_index": 151
     },
     {
@@ -1547,17 +1594,8 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771863544.3671,
+      "ts": 1772167703.147223,
       "draw_index": 152
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771863544.367115,
-      "draw_index": 153
     },
     {
       "type": "points",
@@ -1565,7 +1603,16 @@
       "points": 8,
       "group": "积分",
       "child": "8积分",
-      "ts": 1771863544.367124,
+      "ts": 1772167703.147234,
+      "draw_index": 153
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167703.1472461,
       "draw_index": 154
     },
     {
@@ -1574,16 +1621,16 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771863544.3671381,
+      "ts": 1772167703.147291,
       "draw_index": 155
     },
     {
       "type": "points",
-      "name": "6积分",
-      "points": 6,
+      "name": "7积分",
+      "points": 7,
       "group": "积分",
-      "child": "6积分",
-      "ts": 1771863544.3671522,
+      "child": "7积分",
+      "ts": 1772167703.147305,
       "draw_index": 156
     },
     {
@@ -1592,7 +1639,7 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771865352.357373,
+      "ts": 1772167703.147315,
       "draw_index": 157
     },
     {
@@ -1601,190 +1648,198 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771865352.3575811,
+      "ts": 1772167703.147325,
       "draw_index": 158
     },
     {
       "type": "points",
-      "name": "6积分",
-      "points": 6,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "6积分",
-      "ts": 1771865352.3575869,
+      "child": "5积分",
+      "ts": 1772167703.1473348,
       "draw_index": 159
     },
     {
       "type": "points",
-      "name": "6积分",
-      "points": 6,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "6积分",
-      "ts": 1771865352.35759,
+      "child": "5积分",
+      "ts": 1772167703.147346,
       "draw_index": 160
     },
     {
-      "type": "item",
-      "id": "king_stone",
-      "name": "王者之石×1",
-      "destination": "warehouse",
-      "decompose_points": 0,
-      "decompose_keys": 0,
-      "exchange_points": 0,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "ts": 1771865352.3576279,
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772167704.2338219,
       "draw_index": 161
     },
     {
       "type": "points",
-      "name": "5积分",
-      "points": 5,
+      "name": "6积分",
+      "points": 6,
       "group": "积分",
-      "child": "5积分",
-      "ts": 1771865352.357632,
+      "child": "6积分",
+      "ts": 1772167704.233835,
       "draw_index": 162
     },
     {
       "type": "points",
-      "name": "6积分",
-      "points": 6,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "6积分",
-      "ts": 1771865352.357634,
+      "child": "5积分",
+      "ts": 1772167704.233844,
       "draw_index": 163
     },
     {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865352.3576372,
+      "type": "item",
+      "id": "king_stone",
+      "name": "王者之石×1",
+      "destination": "warehouse",
+      "decompose_points": 0,
+      "decompose_keys": 0,
+      "exchange_points": 0,
+      "image_url": "/cf_images/lot/lot10.png",
+      "popup_image_url": "/cf_images/lot/lot10.png",
+      "ts": 1772167704.233857,
       "draw_index": 164
     },
     {
       "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865352.3576388,
-      "draw_index": 165
-    },
-    {
-      "type": "points",
-      "name": "8积分",
-      "points": 8,
-      "group": "积分",
-      "child": "8积分",
-      "ts": 1771865352.357642,
-      "draw_index": 166
-    },
-    {
-      "type": "points",
       "name": "5积分",
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771865354.644278,
+      "ts": 1772167704.233873,
+      "draw_index": 165
+    },
+    {
+      "type": "item",
+      "id": "king_stone",
+      "name": "王者之石×1",
+      "destination": "warehouse",
+      "decompose_points": 0,
+      "decompose_keys": 0,
+      "exchange_points": 0,
+      "image_url": "/cf_images/lot/lot10.png",
+      "popup_image_url": "/cf_images/lot/lot10.png",
+      "ts": 1772167704.2338822,
+      "draw_index": 166
+    },
+    {
+      "type": "item",
+      "id": "leishen_ziyi_skin",
+      "name": "雷神-紫意 皮肤",
+      "destination": "stash",
+      "decompose_points": 70,
+      "decompose_keys": 0,
+      "exchange_points": 700,
+      "image_url": "/images/dhdj6_e786a708f7.png",
+      "popup_image_url": "/images/dhdj6_e786a708f7.png",
+      "ts": 1772167704.233984,
       "draw_index": 167
     },
     {
       "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772167704.234008,
+      "draw_index": 168
+    },
+    {
+      "type": "points",
       "name": "5积分",
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771865357.2178922,
-      "draw_index": 168
-    },
-    {
-      "type": "item",
-      "id": "king_stone",
-      "name": "王者之石×1",
-      "destination": "warehouse",
-      "decompose_points": 0,
-      "decompose_keys": 0,
-      "exchange_points": 0,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "ts": 1771865361.21841,
+      "ts": 1772167704.2340212,
       "draw_index": 169
     },
     {
       "type": "points",
-      "name": "5积分",
-      "points": 5,
+      "name": "6积分",
+      "points": 6,
       "group": "积分",
-      "child": "5积分",
-      "ts": 1771865361.659262,
+      "child": "6积分",
+      "ts": 1772167704.2340312,
       "draw_index": 170
     },
     {
       "type": "points",
-      "name": "6积分",
-      "points": 6,
+      "name": "7积分",
+      "points": 7,
       "group": "积分",
-      "child": "6积分",
-      "ts": 1771865371.924879,
+      "child": "7积分",
+      "ts": 1772167705.521685,
       "draw_index": 171
     },
     {
       "type": "item",
-      "id": "king_stone",
-      "name": "王者之石×1",
-      "destination": "warehouse",
-      "decompose_points": 0,
+      "id": "leishen_ziyi_skin",
+      "name": "雷神-紫意 皮肤",
+      "destination": "stash",
+      "decompose_points": 70,
       "decompose_keys": 0,
-      "exchange_points": 0,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "ts": 1771865371.924906,
+      "exchange_points": 700,
+      "image_url": "/images/dhdj6_e786a708f7.png",
+      "popup_image_url": "/images/dhdj6_e786a708f7.png",
+      "ts": 1772167705.521703,
       "draw_index": 172
     },
     {
       "type": "points",
-      "name": "8积分",
-      "points": 8,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "8积分",
-      "ts": 1771865371.924914,
+      "child": "5积分",
+      "ts": 1772167705.521715,
       "draw_index": 173
     },
     {
       "type": "points",
-      "name": "6积分",
-      "points": 6,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "6积分",
-      "ts": 1771865371.9249249,
+      "child": "5积分",
+      "ts": 1772167705.521751,
       "draw_index": 174
     },
     {
       "type": "points",
-      "name": "8积分",
-      "points": 8,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "8积分",
-      "ts": 1771865371.924931,
+      "child": "5积分",
+      "ts": 1772167705.52176,
       "draw_index": 175
     },
     {
       "type": "points",
-      "name": "10积分",
-      "points": 10,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "10积分",
-      "ts": 1771865371.924937,
+      "child": "5积分",
+      "ts": 1772167705.52177,
       "draw_index": 176
     },
     {
-      "type": "points",
-      "name": "10积分",
-      "points": 10,
-      "group": "积分",
-      "child": "10积分",
-      "ts": 1771865371.924942,
+      "type": "item",
+      "id": "legend_elisha",
+      "name": "传说艾丽莎",
+      "destination": "stash",
+      "decompose_points": 200,
+      "decompose_keys": 0,
+      "exchange_points": 2000,
+      "image_url": "/images/dhdj2_d678bb03ee.png",
+      "popup_image_url": "/images/dhdj2_d678bb03ee.png",
+      "ts": 1772167705.52178,
       "draw_index": 177
     },
     {
@@ -1793,17 +1848,26 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771865371.924952,
+      "ts": 1772167705.52179,
       "draw_index": 178
     },
     {
       "type": "points",
-      "name": "8积分",
-      "points": 8,
+      "name": "7积分",
+      "points": 7,
       "group": "积分",
-      "child": "8积分",
-      "ts": 1771865371.924957,
+      "child": "7积分",
+      "ts": 1772167705.5217988,
       "draw_index": 179
+    },
+    {
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772167705.5218089,
+      "draw_index": 180
     },
     {
       "type": "points",
@@ -1811,16 +1875,7 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771865371.924963,
-      "draw_index": 180
-    },
-    {
-      "type": "points",
-      "name": "8积分",
-      "points": 8,
-      "group": "积分",
-      "child": "8积分",
-      "ts": 1771865374.25104,
+      "ts": 1772168419.5412312,
       "draw_index": 181
     },
     {
@@ -1829,7 +1884,7 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771865374.251059,
+      "ts": 1772168419.54124,
       "draw_index": 182
     },
     {
@@ -1838,29 +1893,25 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771865374.251074,
+      "ts": 1772168419.5412421,
       "draw_index": 183
     },
     {
-      "type": "item",
-      "id": "huanshen_champion",
-      "name": "幻神-冠军之幻",
-      "destination": "stash",
-      "decompose_points": 0,
-      "decompose_keys": 10,
-      "exchange_points": 1188,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/part3_porp_img3.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot2.png",
-      "ts": 1771865374.251113,
+      "type": "points",
+      "name": "8积分",
+      "points": 8,
+      "group": "积分",
+      "child": "8积分",
+      "ts": 1772168419.5412438,
       "draw_index": 184
     },
     {
       "type": "points",
-      "name": "6积分",
-      "points": 6,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "6积分",
-      "ts": 1771865374.2511292,
+      "child": "5积分",
+      "ts": 1772168419.541247,
       "draw_index": 185
     },
     {
@@ -1869,7 +1920,7 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771865374.251143,
+      "ts": 1772168419.541249,
       "draw_index": 186
     },
     {
@@ -1878,7 +1929,7 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771865374.2511559,
+      "ts": 1772168419.5412512,
       "draw_index": 187
     },
     {
@@ -1887,43 +1938,47 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771865374.2511702,
+      "ts": 1772168419.541253,
       "draw_index": 188
     },
     {
       "type": "points",
-      "name": "6积分",
-      "points": 6,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "6积分",
-      "ts": 1771865374.251183,
+      "child": "5积分",
+      "ts": 1772168419.541255,
       "draw_index": 189
     },
     {
       "type": "points",
-      "name": "6积分",
-      "points": 6,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "6积分",
-      "ts": 1771865374.2511969,
+      "child": "5积分",
+      "ts": 1772168419.541258,
       "draw_index": 190
     },
     {
       "type": "points",
-      "name": "8积分",
-      "points": 8,
-      "group": "积分",
-      "child": "8积分",
-      "ts": 1771865376.233367,
-      "draw_index": 191
-    },
-    {
-      "type": "points",
       "name": "6积分",
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771865376.2333708,
+      "ts": 1772168421.392748,
+      "draw_index": 191
+    },
+    {
+      "type": "item",
+      "id": "longxiao",
+      "name": "龙啸",
+      "destination": "stash",
+      "decompose_points": 45,
+      "decompose_keys": 0,
+      "exchange_points": 450,
+      "image_url": "/images/dhdj10_87dfdc4d4e.png",
+      "popup_image_url": "/images/dhdj10_87dfdc4d4e.png",
+      "ts": 1772168421.392761,
       "draw_index": 192
     },
     {
@@ -1932,35 +1987,21 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771865376.233373,
+      "ts": 1772168421.392769,
       "draw_index": 193
     },
     {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865376.233376,
+      "type": "item",
+      "id": "xuanwu_projection",
+      "name": "玄武投影",
+      "destination": "stash",
+      "decompose_points": 30,
+      "decompose_keys": 0,
+      "exchange_points": 300,
+      "image_url": "/images/dhdj11_2dcf084298.png",
+      "popup_image_url": "/images/dhdj11_2dcf084298.png",
+      "ts": 1772168421.392777,
       "draw_index": 194
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865376.233378,
-      "draw_index": 195
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865376.23338,
-      "draw_index": 196
     },
     {
       "type": "points",
@@ -1968,7 +2009,25 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771865376.233383,
+      "ts": 1772168421.3927848,
+      "draw_index": 195
+    },
+    {
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772168421.392792,
+      "draw_index": 196
+    },
+    {
+      "type": "points",
+      "name": "7积分",
+      "points": 7,
+      "group": "积分",
+      "child": "7积分",
+      "ts": 1772168421.392799,
       "draw_index": 197
     },
     {
@@ -1977,7 +2036,7 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771865376.2333848,
+      "ts": 1772168421.3928058,
       "draw_index": 198
     },
     {
@@ -1986,39 +2045,8 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771865376.233387,
+      "ts": 1772168421.392813,
       "draw_index": 199
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865376.23339,
-      "draw_index": 200
-    },
-    {
-      "type": "item",
-      "id": "huanshen_champion",
-      "name": "幻神-冠军之幻",
-      "destination": "stash",
-      "decompose_points": 0,
-      "decompose_keys": 10,
-      "exchange_points": 1188,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/part3_porp_img3.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot2.png",
-      "ts": 1771865377.372354,
-      "draw_index": 201
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865377.37237,
-      "draw_index": 202
     },
     {
       "type": "points",
@@ -2026,7 +2054,34 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771865377.3723772,
+      "ts": 1772168421.39282,
+      "draw_index": 200
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772168423.9815328,
+      "draw_index": 201
+    },
+    {
+      "type": "points",
+      "name": "7积分",
+      "points": 7,
+      "group": "积分",
+      "child": "7积分",
+      "ts": 1772168423.9815629,
+      "draw_index": 202
+    },
+    {
+      "type": "points",
+      "name": "8积分",
+      "points": 8,
+      "group": "积分",
+      "child": "8积分",
+      "ts": 1772168423.9815738,
       "draw_index": 203
     },
     {
@@ -2035,21 +2090,8 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771865377.372382,
+      "ts": 1772168423.9815848,
       "draw_index": 204
-    },
-    {
-      "type": "item",
-      "id": "destroy_glory",
-      "name": "毁灭-荣耀之怒",
-      "destination": "stash",
-      "decompose_points": 0,
-      "decompose_keys": 2,
-      "exchange_points": 288,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/part3_porp_img8.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot7.png",
-      "ts": 1771865377.3723881,
-      "draw_index": 205
     },
     {
       "type": "points",
@@ -2057,16 +2099,25 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771865377.372393,
+      "ts": 1772168423.9815948,
+      "draw_index": 205
+    },
+    {
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772168423.981605,
       "draw_index": 206
     },
     {
       "type": "points",
-      "name": "8积分",
-      "points": 8,
+      "name": "6积分",
+      "points": 6,
       "group": "积分",
-      "child": "8积分",
-      "ts": 1771865377.3723981,
+      "child": "6积分",
+      "ts": 1772168423.981615,
       "draw_index": 207
     },
     {
@@ -2075,25 +2126,25 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771865377.3724039,
+      "ts": 1772168423.981625,
       "draw_index": 208
     },
     {
       "type": "points",
-      "name": "5积分",
-      "points": 5,
+      "name": "6积分",
+      "points": 6,
       "group": "积分",
-      "child": "5积分",
-      "ts": 1771865377.372409,
+      "child": "6积分",
+      "ts": 1772168423.981635,
       "draw_index": 209
     },
     {
       "type": "points",
-      "name": "5积分",
-      "points": 5,
+      "name": "6积分",
+      "points": 6,
       "group": "积分",
-      "child": "5积分",
-      "ts": 1771865377.3724139,
+      "child": "6积分",
+      "ts": 1772168423.981645,
       "draw_index": 210
     },
     {
@@ -2102,66 +2153,8 @@
       "points": 6,
       "group": "积分",
       "child": "6积分",
-      "ts": 1771865380.743485,
+      "ts": 1772168425.56833,
       "draw_index": 211
-    },
-    {
-      "type": "points",
-      "name": "8积分",
-      "points": 8,
-      "group": "积分",
-      "child": "8积分",
-      "ts": 1771865380.743495,
-      "draw_index": 212
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865380.7435021,
-      "draw_index": 213
-    },
-    {
-      "type": "item",
-      "id": "king_stone",
-      "name": "王者之石×1",
-      "destination": "warehouse",
-      "decompose_points": 0,
-      "decompose_keys": 0,
-      "exchange_points": 0,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "ts": 1771865380.743513,
-      "draw_index": 214
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865380.74352,
-      "draw_index": 215
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865380.743527,
-      "draw_index": 216
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865380.7435331,
-      "draw_index": 217
     },
     {
       "type": "points",
@@ -2169,7 +2162,65 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771865380.743542,
+      "ts": 1772168427.776733,
+      "draw_index": 212
+    },
+    {
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772168429.049098,
+      "draw_index": 213
+    },
+    {
+      "type": "points",
+      "name": "7积分",
+      "points": 7,
+      "group": "积分",
+      "child": "7积分",
+      "ts": 1772168429.72286,
+      "draw_index": 214
+    },
+    {
+      "type": "points",
+      "name": "5积分",
+      "points": 5,
+      "group": "积分",
+      "child": "5积分",
+      "ts": 1772168430.325632,
+      "draw_index": 215
+    },
+    {
+      "type": "points",
+      "name": "7积分",
+      "points": 7,
+      "group": "积分",
+      "child": "7积分",
+      "ts": 1772168430.9620962,
+      "draw_index": 216
+    },
+    {
+      "type": "item",
+      "id": "longxiao",
+      "name": "龙啸",
+      "destination": "stash",
+      "decompose_points": 45,
+      "decompose_keys": 0,
+      "exchange_points": 450,
+      "image_url": "/images/dhdj10_87dfdc4d4e.png",
+      "popup_image_url": "/images/dhdj10_87dfdc4d4e.png",
+      "ts": 1772168431.68664,
+      "draw_index": 217
+    },
+    {
+      "type": "points",
+      "name": "6积分",
+      "points": 6,
+      "group": "积分",
+      "child": "6积分",
+      "ts": 1772168432.624043,
       "draw_index": 218
     },
     {
@@ -2178,589 +2229,17 @@
       "points": 5,
       "group": "积分",
       "child": "5积分",
-      "ts": 1771865380.743548,
+      "ts": 1772168433.237293,
       "draw_index": 219
     },
     {
       "type": "points",
-      "name": "8积分",
-      "points": 8,
+      "name": "5积分",
+      "points": 5,
       "group": "积分",
-      "child": "8积分",
-      "ts": 1771865380.743554,
+      "child": "5积分",
+      "ts": 1772168433.872467,
       "draw_index": 220
-    },
-    {
-      "type": "points",
-      "name": "8积分",
-      "points": 8,
-      "group": "积分",
-      "child": "8积分",
-      "ts": 1771865381.850018,
-      "draw_index": 221
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865381.850432,
-      "draw_index": 222
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865381.8504388,
-      "draw_index": 223
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865381.850442,
-      "draw_index": 224
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865381.850444,
-      "draw_index": 225
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865381.8504472,
-      "draw_index": 226
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865381.85045,
-      "draw_index": 227
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865381.8504598,
-      "draw_index": 228
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865381.850463,
-      "draw_index": 229
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865381.850465,
-      "draw_index": 230
-    },
-    {
-      "type": "item",
-      "id": "king_stone",
-      "name": "王者之石×1",
-      "destination": "warehouse",
-      "decompose_points": 0,
-      "decompose_keys": 0,
-      "exchange_points": 0,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "ts": 1771865382.8944378,
-      "draw_index": 231
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865382.894449,
-      "draw_index": 232
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865382.894453,
-      "draw_index": 233
-    },
-    {
-      "type": "points",
-      "name": "8积分",
-      "points": 8,
-      "group": "积分",
-      "child": "8积分",
-      "ts": 1771865382.8944561,
-      "draw_index": 234
-    },
-    {
-      "type": "points",
-      "name": "8积分",
-      "points": 8,
-      "group": "积分",
-      "child": "8积分",
-      "ts": 1771865382.8944588,
-      "draw_index": 235
-    },
-    {
-      "type": "item",
-      "id": "king_stone",
-      "name": "王者之石×1",
-      "destination": "warehouse",
-      "decompose_points": 0,
-      "decompose_keys": 0,
-      "exchange_points": 0,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "ts": 1771865382.894461,
-      "draw_index": 236
-    },
-    {
-      "type": "item",
-      "id": "king_stone",
-      "name": "王者之石×1",
-      "destination": "warehouse",
-      "decompose_points": 0,
-      "decompose_keys": 0,
-      "exchange_points": 0,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "ts": 1771865382.894463,
-      "draw_index": 237
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865382.894465,
-      "draw_index": 238
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865382.894468,
-      "draw_index": 239
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865382.89447,
-      "draw_index": 240
-    },
-    {
-      "type": "points",
-      "name": "10积分",
-      "points": 10,
-      "group": "积分",
-      "child": "10积分",
-      "ts": 1771865383.961749,
-      "draw_index": 241
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865383.9617531,
-      "draw_index": 242
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865383.961756,
-      "draw_index": 243
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865383.961759,
-      "draw_index": 244
-    },
-    {
-      "type": "item",
-      "id": "c4_no_tool",
-      "name": "C4-高无钳",
-      "destination": "stash",
-      "decompose_points": 0,
-      "decompose_keys": 1,
-      "exchange_points": 168,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/part3_porp_img10.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot9.png",
-      "ts": 1771865383.961768,
-      "draw_index": 245
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865383.961771,
-      "draw_index": 246
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865383.961774,
-      "draw_index": 247
-    },
-    {
-      "type": "points",
-      "name": "8积分",
-      "points": 8,
-      "group": "积分",
-      "child": "8积分",
-      "ts": 1771865383.961776,
-      "draw_index": 248
-    },
-    {
-      "type": "points",
-      "name": "10积分",
-      "points": 10,
-      "group": "积分",
-      "child": "10积分",
-      "ts": 1771865383.961778,
-      "draw_index": 249
-    },
-    {
-      "type": "points",
-      "name": "8积分",
-      "points": 8,
-      "group": "积分",
-      "child": "8积分",
-      "ts": 1771865383.961781,
-      "draw_index": 250
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865386.010734,
-      "draw_index": 251
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865386.010796,
-      "draw_index": 252
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865386.0108001,
-      "draw_index": 253
-    },
-    {
-      "type": "item",
-      "id": "king_stone",
-      "name": "王者之石×1",
-      "destination": "warehouse",
-      "decompose_points": 0,
-      "decompose_keys": 0,
-      "exchange_points": 0,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "ts": 1771865386.010884,
-      "draw_index": 254
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865386.010945,
-      "draw_index": 255
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865386.0109482,
-      "draw_index": 256
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865386.0109508,
-      "draw_index": 257
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865386.01106,
-      "draw_index": 258
-    },
-    {
-      "type": "item",
-      "id": "white_tiger_skin",
-      "name": "白虎-巅峰荣耀",
-      "destination": "stash",
-      "decompose_points": 0,
-      "decompose_keys": 6,
-      "exchange_points": 768,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/part3_porp_img6.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot5.png",
-      "ts": 1771865386.0111942,
-      "draw_index": 259
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865386.011203,
-      "draw_index": 260
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865387.473957,
-      "draw_index": 261
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865387.473967,
-      "draw_index": 262
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865387.47397,
-      "draw_index": 263
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865387.473972,
-      "draw_index": 264
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865387.473975,
-      "draw_index": 265
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865387.473977,
-      "draw_index": 266
-    },
-    {
-      "type": "points",
-      "name": "8积分",
-      "points": 8,
-      "group": "积分",
-      "child": "8积分",
-      "ts": 1771865387.473979,
-      "draw_index": 267
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865387.4739819,
-      "draw_index": 268
-    },
-    {
-      "type": "points",
-      "name": "10积分",
-      "points": 10,
-      "group": "积分",
-      "child": "10积分",
-      "ts": 1771865387.473985,
-      "draw_index": 269
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865387.473988,
-      "draw_index": 270
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865388.575868,
-      "draw_index": 271
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865388.575876,
-      "draw_index": 272
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865388.575883,
-      "draw_index": 273
-    },
-    {
-      "type": "item",
-      "id": "destroy_glory",
-      "name": "毁灭-荣耀之怒",
-      "destination": "stash",
-      "decompose_points": 0,
-      "decompose_keys": 2,
-      "exchange_points": 288,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/part3_porp_img8.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot7.png",
-      "ts": 1771865388.575901,
-      "draw_index": 274
-    },
-    {
-      "type": "item",
-      "id": "king_stone",
-      "name": "王者之石×1",
-      "destination": "warehouse",
-      "decompose_points": 0,
-      "decompose_keys": 0,
-      "exchange_points": 0,
-      "image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "popup_image_url": "https://game.gtimg.cn/images/actdaoju/act/a20260130ryzc/lot/lot10.png",
-      "ts": 1771865388.5759082,
-      "draw_index": 275
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865388.575914,
-      "draw_index": 276
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865388.57592,
-      "draw_index": 277
-    },
-    {
-      "type": "points",
-      "name": "5积分",
-      "points": 5,
-      "group": "积分",
-      "child": "5积分",
-      "ts": 1771865388.575926,
-      "draw_index": 278
-    },
-    {
-      "type": "points",
-      "name": "6积分",
-      "points": 6,
-      "group": "积分",
-      "child": "6积分",
-      "ts": 1771865388.5759318,
-      "draw_index": 279
-    },
-    {
-      "type": "points",
-      "name": "8积分",
-      "points": 8,
-      "group": "积分",
-      "child": "8积分",
-      "ts": 1771865388.575938,
-      "draw_index": 280
     }
   ]
 }

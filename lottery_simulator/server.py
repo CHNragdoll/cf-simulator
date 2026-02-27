@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 import json
 import math
+import os
 import random
+import re
 import sqlite3
 import threading
 import time
@@ -16,11 +18,89 @@ STATIC_DIR = BASE_DIR / "static"
 STATE_PATH = BASE_DIR / "data" / "state.json"
 DB_PATH = BASE_DIR / "data" / "lottery.db"
 HOST = "127.0.0.1"
-PORT = 8000
+PORT = int(os.environ.get("CF_SIM_PORT", "18081"))
 
 LOCK = threading.Lock()
 SIM_JOBS = {}
 SIM_JOBS_LOCK = threading.Lock()
+
+DB_ADMIN_TABLE_LABELS = {
+    "purchase_options": "购买选项",
+    "points_groups": "积分组",
+    "prize_items": "奖品主表",
+    "pool_layout_settings": "奖池布局设置",
+    "pool_palette_priority": "颜色优先级",
+    "popup_highlight_rules": "弹窗高亮规则",
+    "system_settings": "系统全局设置",
+    "schema_migrations": "迁移记录",
+}
+
+DB_ADMIN_COLUMN_LABELS = {
+    "option_key": "选项键",
+    "label": "显示名称",
+    "price": "价格(元)",
+    "keys_count": "钥匙数量",
+    "group_key": "积分组键",
+    "name": "名称",
+    "image_url": "图片地址",
+    "card_bg_color": "卡片背景",
+    "palette_key": "颜色等级",
+    "sort_order": "排序",
+    "item_id": "道具ID",
+    "item_type": "道具类型",
+    "in_pool": "是否进奖池(0/1)",
+    "pool_weight": "奖池权重",
+    "points_value": "积分值",
+    "exchange_points": "兑换积分",
+    "decompose_points": "分解得积分",
+    "decompose_keys": "分解得钥匙",
+    "direct_to_warehouse": "直发仓库(0/1)",
+    "popup_image_url": "弹窗图片",
+    "redeem_limit_enabled": "限兑开关(0/1)",
+    "redeem_limit_count": "限兑数量",
+    "redeem_tag_left": "兑换左标签",
+    "redeem_tag_right": "兑换右标签",
+    "setting_key": "配置键",
+    "setting_value": "配置值",
+    "priority": "优先级",
+    "enabled": "启用(0/1)",
+    "migration_key": "迁移键",
+    "applied_at": "执行时间戳",
+}
+
+DB_ADMIN_BOOLEAN_COLUMNS = {
+    "in_pool",
+    "direct_to_warehouse",
+    "redeem_limit_enabled",
+    "enabled",
+}
+
+
+def _db_admin_tables(conn):
+    rows = conn.execute(
+        "SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name"
+    ).fetchall()
+    return [r["name"] for r in rows]
+
+
+def _db_admin_schema(conn, table_name):
+    return [
+        {
+            "name": r["name"],
+            "type": (r["type"] or "TEXT").upper(),
+            "notnull": int(r["notnull"]),
+            "default": r["dflt_value"],
+            "pk": int(r["pk"]),
+            "label_zh": DB_ADMIN_COLUMN_LABELS.get(r["name"], r["name"]),
+        }
+        for r in conn.execute(f"PRAGMA table_info('{table_name}')").fetchall()
+    ]
+
+
+def _db_admin_validate_table(conn, table_name):
+    if not isinstance(table_name, str) or not re.fullmatch(r"[A-Za-z_][A-Za-z0-9_]*", table_name):
+        return False
+    return table_name in set(_db_admin_tables(conn))
 
 
 def _default_state():
@@ -107,6 +187,31 @@ def db_conn():
     return conn
 
 
+def _migration_done(cur, migration_key):
+    row = cur.execute(
+        "SELECT 1 FROM schema_migrations WHERE migration_key=? LIMIT 1",
+        (migration_key,),
+    ).fetchone()
+    return row is not None
+
+
+def _mark_migration_done(cur, migration_key):
+    cur.execute(
+        "INSERT OR IGNORE INTO schema_migrations(migration_key,applied_at) VALUES(?,?)",
+        (migration_key, int(time.time())),
+    )
+
+
+def get_system_setting(conn, key, default_value=""):
+    row = conn.execute(
+        "SELECT setting_value FROM system_settings WHERE setting_key=?",
+        (key,),
+    ).fetchone()
+    if not row:
+        return default_value
+    return row["setting_value"]
+
+
 def init_db():
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     conn = db_conn()
@@ -168,6 +273,16 @@ def init_db():
           palette_key TEXT PRIMARY KEY,
           enabled INTEGER NOT NULL DEFAULT 0
         );
+
+        CREATE TABLE IF NOT EXISTS system_settings (
+          setting_key TEXT PRIMARY KEY,
+          setting_value TEXT NOT NULL
+        );
+
+        CREATE TABLE IF NOT EXISTS schema_migrations (
+          migration_key TEXT PRIMARY KEY,
+          applied_at INTEGER NOT NULL
+        );
         """
     )
 
@@ -214,28 +329,31 @@ def init_db():
             INSERT INTO prize_items(
               item_id,name,item_type,in_pool,pool_weight,group_key,points_value,
               exchange_points,decompose_points,decompose_keys,direct_to_warehouse,
-              image_url,card_bg_color,palette_key,sort_order
-            ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+              image_url,popup_image_url,card_bg_color,palette_key,sort_order
+            ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
             """,
             [
-                ("knife_champion", "Knife-冠军之刃", "item", 1, 0.1, None, 0, 1188, 120, 0, 0, "", "linear-gradient(180deg,#ff9d00 0%,#f78b00 66%,#f3d8b2 66%,#f3d8b2 100%)", "orange", 1),
-                ("huanshen_champion", "幻神-冠军之幻", "item", 1, 0.15, None, 0, 1188, 120, 0, 0, "", "linear-gradient(180deg,#ff9d00 0%,#f78b00 66%,#f3d8b2 66%,#f3d8b2 100%)", "orange", 2),
-                ("colt_champion", "柯尔特-冠军之特", "item", 1, 0.2, None, 0, 888, 80, 0, 0, "", "linear-gradient(180deg,#ff9d00 0%,#f78b00 66%,#f3d8b2 66%,#f3d8b2 100%)", "orange", 3),
-                ("qbz_champion", "QBZ03-冠军之薇", "item", 1, 0.2, None, 0, 888, 80, 0, 0, "", "linear-gradient(180deg,#ff9d00 0%,#f78b00 66%,#f3d8b2 66%,#f3d8b2 100%)", "orange", 4),
-                ("white_tiger_skin", "白虎-巅峰荣耀", "item", 1, 0.25, None, 0, 768, 60, 0, 0, "", "linear-gradient(180deg,#ff9d00 0%,#f78b00 66%,#f3d8b2 66%,#f3d8b2 100%)", "purple", 5),
-                ("raytheon_glory", "雷神-荣耀之魄", "item", 1, 0.4, None, 0, 468, 40, 0, 0, "", "linear-gradient(180deg,#8f59e2 0%,#7a44c8 66%,#c8b6ea 66%,#c8b6ea 100%)", "purple", 6),
-                ("destroy_glory", "毁灭-荣耀之怒", "item", 1, 0.7, None, 0, 288, 30, 0, 0, "", "linear-gradient(180deg,#8f59e2 0%,#7a44c8 66%,#c8b6ea 66%,#c8b6ea 100%)", "blue", 7),
-                ("dragon_glory", "屠龙-荣耀之锋", "item", 1, 0.8, None, 0, 288, 30, 0, 0, "", "linear-gradient(180deg,#8f59e2 0%,#7a44c8 66%,#c8b6ea 66%,#c8b6ea 100%)", "blue", 8),
-                ("c4_no_tool", "C4-高无钳", "item", 1, 1.5, None, 0, 188, 20, 0, 0, "", "linear-gradient(180deg,#4f93ff 0%,#367af0 66%,#bfd7ff 66%,#bfd7ff 100%)", "blue", 9),
-                ("king_stone", "王者之石x1", "item", 1, 5.2, None, 0, 88, 10, 0, 1, "", "linear-gradient(180deg,#dcdcdc 0%,#c5c5c5 66%,#efefef 66%,#efefef 100%)", "gray", 10),
-                ("points_88", "88积分", "points_child", 1, 0.5, "points_pool", 88, 0, 0, 0, 0, "", "", "gray", 200),
-                ("points_66", "66积分", "points_child", 1, 1.0, "points_pool", 66, 0, 0, 0, 0, "", "", "gray", 201),
-                ("points_20", "20积分", "points_child", 1, 2.0, "points_pool", 20, 0, 0, 0, 0, "", "", "gray", 202),
-                ("points_10", "10积分", "points_child", 1, 5.0, "points_pool", 10, 0, 0, 0, 0, "", "", "gray", 203),
-                ("points_8", "8积分", "points_child", 1, 8.0, "points_pool", 8, 0, 0, 0, 0, "", "", "gray", 204),
-                ("points_6", "6积分", "points_child", 1, 35.0, "points_pool", 6, 0, 0, 0, 0, "", "", "gray", 205),
-                ("points_5", "5积分", "points_child", 1, 39.0, "points_pool", 5, 0, 0, 0, 0, "", "", "gray", 206),
-                ("redeem_only_m4", "M4A1-兑换专属", "item", 0, 0, None, 0, 1288, 0, 0, 0, "", "linear-gradient(180deg,#e5e5e5 0%,#d1d1d1 66%,#f4f4f4 66%,#f4f4f4 100%)", "gray", 300)
+                ("legend_haojie", "传说浩劫", "item", 1, 0.08, None, 0, 2000, 200, 0, 0, "/images/dhdj1_d58213e7ca.png", "/images/dhdj1_d58213e7ca.png", "linear-gradient(180deg,#ff5a43 0%,#db2a16 66%,#ffc1b9 66%,#ffc1b9 100%)", "red", 1),
+                ("legend_elisha", "传说艾丽莎", "item", 1, 0.08, None, 0, 2000, 200, 0, 0, "/images/dhdj2_d678bb03ee.png", "/images/dhdj2_d678bb03ee.png", "linear-gradient(180deg,#ff5a43 0%,#db2a16 66%,#ffc1b9 66%,#ffc1b9 100%)", "red", 2),
+                ("king_yanwu", "王者炎武", "item", 1, 0.25, None, 0, 1200, 120, 0, 0, "/images/dhdj3_34c4f9c45b.png", "/images/dhdj3_34c4f9c45b.png", "linear-gradient(180deg,#ff9d00 0%,#f78b00 66%,#f3d8b2 66%,#f3d8b2 100%)", "orange", 3),
+                ("usp_mingwang", "USP-冥王", "item", 1, 0.45, None, 0, 900, 90, 0, 0, "/images/dhdj4_230a77a4de.png", "/images/dhdj4_230a77a4de.png", "linear-gradient(180deg,#ff9d00 0%,#f78b00 66%,#f3d8b2 66%,#f3d8b2 100%)", "orange", 4),
+                ("g36c_sound_card", "G36C-幻影音效卡", "item", 1, 0.9, None, 0, 600, 60, 0, 0, "/images/dhdj5_5f3158a869.png", "/images/dhdj5_5f3158a869.png", "linear-gradient(180deg,#8f59e2 0%,#7a44c8 66%,#c8b6ea 66%,#c8b6ea 100%)", "purple", 5),
+                ("leishen_ziyi_skin", "雷神-紫意 皮肤", "item", 1, 1.2, None, 0, 700, 70, 0, 0, "/images/dhdj6_e786a708f7.png", "/images/dhdj6_e786a708f7.png", "linear-gradient(180deg,#8f59e2 0%,#7a44c8 66%,#c8b6ea 66%,#c8b6ea 100%)", "purple", 6),
+                ("longxiao_ziyi_skin", "龙啸-紫意 皮肤", "item", 1, 1.3, None, 0, 700, 70, 0, 0, "/images/dhdj7_cff238656c.png", "/images/dhdj7_cff238656c.png", "linear-gradient(180deg,#8f59e2 0%,#7a44c8 66%,#c8b6ea 66%,#c8b6ea 100%)", "purple", 7),
+                ("longxiao_sound_card", "龙啸音效卡", "item", 1, 1.5, None, 0, 500, 50, 0, 0, "/images/dhdj8_35ca1762e7.png", "/images/dhdj8_35ca1762e7.png", "linear-gradient(180deg,#8f59e2 0%,#7a44c8 66%,#c8b6ea 66%,#c8b6ea 100%)", "purple", 8),
+                ("m4a1_leishen", "M4A1-雷神", "item", 1, 1.8, None, 0, 550, 55, 0, 0, "/images/dhdj9_75df578690.png", "/images/dhdj9_75df578690.png", "linear-gradient(180deg,#8f59e2 0%,#7a44c8 66%,#c8b6ea 66%,#c8b6ea 100%)", "purple", 9),
+                ("longxiao", "龙啸", "item", 1, 2.1, None, 0, 450, 45, 0, 0, "/images/dhdj10_87dfdc4d4e.png", "/images/dhdj10_87dfdc4d4e.png", "linear-gradient(180deg,#8f59e2 0%,#7a44c8 66%,#c8b6ea 66%,#c8b6ea 100%)", "purple", 10),
+                ("xuanwu_projection", "玄武投影", "item", 1, 2.4, None, 0, 300, 30, 0, 0, "/images/dhdj11_2dcf084298.png", "/images/dhdj11_2dcf084298.png", "linear-gradient(180deg,#4f93ff 0%,#367af0 66%,#bfd7ff 66%,#bfd7ff 100%)", "blue", 11),
+                ("king_stone", "王者之石×1", "item", 1, 5.5, None, 0, 0, 0, 0, 1, "/cf_images/lot/lot10.png", "/cf_images/lot/lot10.png", "linear-gradient(180deg,#dcdcdc 0%,#c5c5c5 66%,#efefef 66%,#efefef 100%)", "gray", 12),
+                ("points_18", "18积分", "points_child", 1, 2.0, "points_pool", 18, 0, 0, 0, 0, "", "", "", "gray", 200),
+                ("points_8", "8积分", "points_child", 1, 8.0, "points_pool", 8, 0, 0, 0, 0, "", "", "", "gray", 201),
+                ("points_7", "7积分", "points_child", 1, 15.0, "points_pool", 7, 0, 0, 0, 0, "", "", "", "gray", 202),
+                ("points_6", "6积分", "points_child", 1, 30.0, "points_pool", 6, 0, 0, 0, 0, "", "", "", "gray", 203),
+                ("points_5", "5积分", "points_child", 1, 45.0, "points_pool", 5, 0, 0, 0, 0, "", "", "", "gray", 204),
+                ("redeem_trade_key_x5", "交易专用钥匙×5", "item", 0, 0, None, 0, 25, 0, 0, 0, "/images/dhdj12_1fc241fca7.png", "/images/dhdj12_1fc241fca7.png", "linear-gradient(180deg,#e5e5e5 0%,#d1d1d1 66%,#f4f4f4 66%,#f4f4f4 100%)", "gray", 300),
+                ("redeem_attr_ticket_x5", "属性变更券×5", "item", 0, 0, None, 0, 30, 0, 0, 0, "/images/dhdj13_cae378856f.png", "/images/dhdj13_cae378856f.png", "linear-gradient(180deg,#e5e5e5 0%,#d1d1d1 66%,#f4f4f4 66%,#f4f4f4 100%)", "gray", 301),
+                ("redeem_trade_key_x1", "交易专用钥匙×1", "item", 0, 0, None, 0, 5, 0, 0, 0, "/images/dhdj14_e7a6568317.png", "/images/dhdj14_e7a6568317.png", "linear-gradient(180deg,#e5e5e5 0%,#d1d1d1 66%,#f4f4f4 66%,#f4f4f4 100%)", "gray", 302),
+                ("redeem_attr_ticket_x1", "属性变更券×1", "item", 0, 0, None, 0, 8, 0, 0, 0, "/images/dhdj15_cec6d0990e.png", "/images/dhdj15_cec6d0990e.png", "linear-gradient(180deg,#e5e5e5 0%,#d1d1d1 66%,#f4f4f4 66%,#f4f4f4 100%)", "gray", 303),
             ],
         )
 
@@ -247,36 +365,48 @@ def init_db():
     if cur.fetchone()["c"] == 0:
         cur.executemany(
             "INSERT INTO pool_palette_priority(palette_key,priority) VALUES(?,?)",
-            [("orange", 1), ("purple", 2), ("blue", 3), ("gray", 4)],
+            [("red", 1), ("orange", 2), ("purple", 3), ("blue", 4), ("gray", 5)],
         )
 
     cur.execute("SELECT COUNT(*) AS c FROM popup_highlight_rules")
     if cur.fetchone()["c"] == 0:
         cur.executemany(
             "INSERT INTO popup_highlight_rules(palette_key,enabled) VALUES(?,?)",
-            [("orange", 1), ("purple", 1), ("blue", 1), ("gray", 0)],
+            [("red", 1), ("orange", 1), ("purple", 1), ("blue", 1), ("gray", 0)],
         )
 
-    # Keep fixed gray items stable and backfill palette defaults for old data.
-    cur.execute("UPDATE prize_items SET palette_key='gray' WHERE item_id='king_stone'")
-    cur.execute("UPDATE points_groups SET palette_key='gray' WHERE group_key='points_pool'")
-    cur.execute(
-        "UPDATE prize_items SET palette_key='orange' WHERE item_id IN ('knife_champion','huanshen_champion','colt_champion','qbz_champion')"
+    cur.executemany(
+        "INSERT OR IGNORE INTO system_settings(setting_key,setting_value) VALUES(?,?)",
+        [
+            ("points_image_url", "/cf_images/jifen.png"),
+            ("redeem_destination", "warehouse"),
+        ],
     )
-    cur.execute(
-        "UPDATE prize_items SET palette_key='purple' WHERE item_id IN ('white_tiger_skin','raytheon_glory')"
-    )
-    cur.execute(
-        "UPDATE prize_items SET palette_key='blue' WHERE item_id IN ('destroy_glory','dragon_glory','c4_no_tool')"
-    )
+
+    # Backfill defaults only for blank values so DB edits remain authoritative.
     cur.execute("UPDATE prize_items SET palette_key='orange' WHERE item_type='item' AND palette_key=''")
     cur.execute("UPDATE points_groups SET palette_key='gray' WHERE palette_key=''")
-    # Current activity setting: redeem list items are limited to 1 by default.
-    cur.execute("UPDATE prize_items SET redeem_limit_enabled=1, redeem_limit_count=1 WHERE exchange_points>0")
-    # Exclude utility consumables from redeem limits.
-    cur.execute(
-        "UPDATE prize_items SET redeem_limit_enabled=0, redeem_limit_count=0 WHERE item_id IN ('redeem_only_m4','redeem_key_trade')"
-    )
+
+    # One-time migration for old datasets that had no redeem limits configured.
+    migration_key = "redeem_limit_default_v1"
+    if not _migration_done(cur, migration_key):
+        stat = cur.execute(
+            """
+            SELECT
+              SUM(CASE WHEN exchange_points>0 THEN 1 ELSE 0 END) AS total_redeemable,
+              SUM(CASE WHEN exchange_points>0 AND redeem_limit_enabled=1 THEN 1 ELSE 0 END) AS limited_redeemable
+            FROM prize_items
+            """
+        ).fetchone()
+        total_redeemable = int(stat["total_redeemable"] or 0)
+        limited_redeemable = int(stat["limited_redeemable"] or 0)
+        if total_redeemable > 0 and limited_redeemable == 0:
+            cur.execute("UPDATE prize_items SET redeem_limit_enabled=1, redeem_limit_count=1 WHERE exchange_points>0")
+            cur.execute(
+                "UPDATE prize_items SET redeem_limit_enabled=0, redeem_limit_count=0 WHERE item_id IN ('redeem_only_m4','redeem_key_trade','redeem_trade_key_x5','redeem_attr_ticket_x5','redeem_trade_key_x1','redeem_attr_ticket_x1')"
+            )
+        _mark_migration_done(cur, migration_key)
+
     # Backfill redeem corner tags from limit settings when DB tag is empty.
     cur.execute(
         """
@@ -323,7 +453,7 @@ def get_layout_rows(conn):
 def get_palette_priorities(conn):
     rows = conn.execute("SELECT palette_key,priority FROM pool_palette_priority").fetchall()
     if not rows:
-        return {"orange": 1, "purple": 2, "blue": 3, "gray": 4}
+        return {"red": 1, "orange": 2, "purple": 3, "blue": 4, "gray": 5}
     return {r["palette_key"]: int(r["priority"]) for r in rows}
 
 
@@ -332,8 +462,15 @@ def get_popup_highlight_palettes(conn):
         "SELECT palette_key FROM popup_highlight_rules WHERE enabled=1 ORDER BY palette_key"
     ).fetchall()
     if not rows:
-        return ["orange", "purple", "blue"]
+        return ["red", "orange", "purple", "blue"]
     return [r["palette_key"] for r in rows]
+
+
+def get_redeem_destination(conn):
+    value = (get_system_setting(conn, "redeem_destination", "warehouse") or "warehouse").strip().lower()
+    if value not in ("warehouse", "stash"):
+        return "warehouse"
+    return value
 
 
 def get_pool_data(conn):
@@ -1252,6 +1389,9 @@ class Handler(BaseHTTPRequestHandler):
         if path == "/":
             return self._send_file(STATIC_DIR / "index.html")
 
+        if path == "/admin":
+            return self._send_file(STATIC_DIR / "admin.html")
+
         if path.startswith("/static/"):
             rel = path[len("/static/"):]
             return self._send_file(STATIC_DIR / rel)
@@ -1264,22 +1404,25 @@ class Handler(BaseHTTPRequestHandler):
             rel = path[len("/cf_images/"):]
             return self._send_file(BASE_DIR.parent / "cf_images" / rel)
 
+        if path.startswith("/images/"):
+            rel = path[len("/images/"):]
+            return self._send_file(BASE_DIR.parent / "images" / rel)
+
         if path == "/api/config":
             with LOCK:
                 conn = db_conn()
                 pool = get_pool_data(conn)
                 shop = build_shop_items(conn)
-                points_image_url = ""
-                for r in pool:
-                    if r.get("type") == "points_group":
-                        points_image_url = r.get("image_url", "")
-                        break
+                points_image_url = (
+                    get_system_setting(conn, "points_image_url", "/cf_images/jifen.png")
+                    or "/cf_images/jifen.png"
+                )
                 payload = {
                     "purchase_options": get_purchase_options(conn),
                     "pool": build_pool_view(pool),
                     "shop_items": shop,
                     "decompose_mode": infer_decompose_mode(shop),
-                    "points_image_url": points_image_url or "/cf_images/jifen.png",
+                    "points_image_url": points_image_url,
                     "layout_rows": get_layout_rows(conn),
                     "popup_highlight_palettes": get_popup_highlight_palettes(conn),
                 }
@@ -1346,6 +1489,48 @@ class Handler(BaseHTTPRequestHandler):
                 conn.close()
             return response_json(self, 200, {"rows": [dict(r) for r in rows]})
 
+        if path == "/api/db/meta":
+            with LOCK:
+                conn = db_conn()
+                tables = _db_admin_tables(conn)
+                conn.close()
+            payload = {
+                "tables": [
+                    {"name": t, "label_zh": DB_ADMIN_TABLE_LABELS.get(t, t)}
+                    for t in tables
+                ],
+                "column_labels_zh": DB_ADMIN_COLUMN_LABELS,
+                "boolean_columns": sorted(DB_ADMIN_BOOLEAN_COLUMNS),
+            }
+            return response_json(self, 200, payload)
+
+        if path == "/api/db/schema":
+            table = (query.get("table") or [""])[0]
+            with LOCK:
+                conn = db_conn()
+                if not _db_admin_validate_table(conn, table):
+                    conn.close()
+                    return response_json(self, 400, {"ok": False, "error": "invalid table"})
+                schema = _db_admin_schema(conn, table)
+                conn.close()
+            return response_json(self, 200, {"ok": True, "table": table, "schema": schema})
+
+        if path == "/api/db/rows":
+            table = (query.get("table") or [""])[0]
+            with LOCK:
+                conn = db_conn()
+                if not _db_admin_validate_table(conn, table):
+                    conn.close()
+                    return response_json(self, 400, {"ok": False, "error": "invalid table"})
+                schema = _db_admin_schema(conn, table)
+                rows = conn.execute(f"SELECT rowid AS _rowid_, * FROM {table}").fetchall()
+                conn.close()
+            return response_json(
+                self,
+                200,
+                {"ok": True, "table": table, "schema": schema, "rows": [dict(r) for r in rows]},
+            )
+
         self.send_error(404)
 
     def do_POST(self):
@@ -1354,6 +1539,102 @@ class Handler(BaseHTTPRequestHandler):
 
         if path == "/api/config/reload":
             return response_json(self, 200, {"ok": True})
+
+        if path == "/api/db/insert":
+            table = body.get("table")
+            data = body.get("data") or {}
+            if not isinstance(data, dict):
+                return response_json(self, 400, {"ok": False, "error": "invalid data"})
+            with LOCK:
+                conn = db_conn()
+                if not _db_admin_validate_table(conn, table):
+                    conn.close()
+                    return response_json(self, 400, {"ok": False, "error": "invalid table"})
+                schema = _db_admin_schema(conn, table)
+                cols = {c["name"]: c for c in schema}
+                use_cols, use_vals = [], []
+                for name in cols:
+                    if name in data and data[name] is not None:
+                        use_cols.append(name)
+                        use_vals.append(data[name])
+                if not use_cols:
+                    conn.close()
+                    return response_json(self, 400, {"ok": False, "error": "no values to insert"})
+                sql = f"INSERT INTO {table}({', '.join(use_cols)}) VALUES({', '.join(['?' for _ in use_cols])})"
+                try:
+                    conn.execute(sql, use_vals)
+                    conn.commit()
+                except Exception as e:
+                    conn.close()
+                    return response_json(self, 400, {"ok": False, "error": str(e)})
+                conn.close()
+            return response_json(self, 200, {"ok": True})
+
+        if path == "/api/db/update":
+            table = body.get("table")
+            data = body.get("data") or {}
+            pk = body.get("pk") or {}
+            if not isinstance(data, dict) or not isinstance(pk, dict):
+                return response_json(self, 400, {"ok": False, "error": "invalid params"})
+            with LOCK:
+                conn = db_conn()
+                if not _db_admin_validate_table(conn, table):
+                    conn.close()
+                    return response_json(self, 400, {"ok": False, "error": "invalid table"})
+                schema = _db_admin_schema(conn, table)
+                pk_cols = [c["name"] for c in sorted(schema, key=lambda x: x["pk"]) if c["pk"] > 0]
+                if not pk_cols and schema:
+                    pk_cols = [schema[0]["name"]]
+                if any(k not in pk for k in pk_cols):
+                    conn.close()
+                    return response_json(self, 400, {"ok": False, "error": "missing pk fields"})
+                set_cols = [c["name"] for c in schema if c["name"] not in pk_cols and c["name"] in data]
+                if not set_cols:
+                    conn.close()
+                    return response_json(self, 400, {"ok": False, "error": "no fields to update"})
+                set_clause = ", ".join([f"{c}=?" for c in set_cols])
+                where_clause = " AND ".join([f"{c}=?" for c in pk_cols])
+                params = [data[c] for c in set_cols] + [pk[c] for c in pk_cols]
+                sql = f"UPDATE {table} SET {set_clause} WHERE {where_clause}"
+                try:
+                    cur = conn.execute(sql, params)
+                    conn.commit()
+                except Exception as e:
+                    conn.close()
+                    return response_json(self, 400, {"ok": False, "error": str(e)})
+                affected = cur.rowcount
+                conn.close()
+            return response_json(self, 200, {"ok": True, "affected": int(affected)})
+
+        if path == "/api/db/delete":
+            table = body.get("table")
+            pk = body.get("pk") or {}
+            if not isinstance(pk, dict):
+                return response_json(self, 400, {"ok": False, "error": "invalid pk"})
+            with LOCK:
+                conn = db_conn()
+                if not _db_admin_validate_table(conn, table):
+                    conn.close()
+                    return response_json(self, 400, {"ok": False, "error": "invalid table"})
+                schema = _db_admin_schema(conn, table)
+                pk_cols = [c["name"] for c in sorted(schema, key=lambda x: x["pk"]) if c["pk"] > 0]
+                if not pk_cols and schema:
+                    pk_cols = [schema[0]["name"]]
+                if any(k not in pk for k in pk_cols):
+                    conn.close()
+                    return response_json(self, 400, {"ok": False, "error": "missing pk fields"})
+                where_clause = " AND ".join([f"{c}=?" for c in pk_cols])
+                params = [pk[c] for c in pk_cols]
+                sql = f"DELETE FROM {table} WHERE {where_clause}"
+                try:
+                    cur = conn.execute(sql, params)
+                    conn.commit()
+                except Exception as e:
+                    conn.close()
+                    return response_json(self, 400, {"ok": False, "error": str(e)})
+                affected = cur.rowcount
+                conn.close()
+            return response_json(self, 200, {"ok": True, "affected": int(affected)})
 
         if path == "/api/buy":
             option = body.get("option")
@@ -1624,9 +1905,14 @@ class Handler(BaseHTTPRequestHandler):
                     }
                 )
 
-                # Current rule: redeemed items are always sent to warehouse.
-                destination = "warehouse"
-                bump(state["warehouse"], item_id, qty)
+                destination = get_redeem_destination(conn)
+                if destination == "stash":
+                    bump(state["stash"], item_id, qty)
+                    for _ in range(qty):
+                        append_stash_record(state, item_id, item_meta["name"])
+                else:
+                    destination = "warehouse"
+                    bump(state["warehouse"], item_id, qty)
 
                 shop = build_shop_items(conn)
                 conn.close()
@@ -1715,6 +2001,7 @@ def main():
 
     server = ThreadingHTTPServer((HOST, PORT), Handler)
     print(f"Simulator running: http://{HOST}:{PORT}")
+    print(f"Admin running: http://{HOST}:{PORT}/admin")
     print(f"DB path: {DB_PATH}")
     server.serve_forever()
 

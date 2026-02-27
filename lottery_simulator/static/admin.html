@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数据库可视化管理</title>
+  <link rel="stylesheet" href="/static/admin.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>数据库可视化管理</h1>
+    <a class="back" href="/">返回模拟器</a>
+  </header>
+
+  <section class="toolbar">
+    <label for="tableSelect">数据表</label>
+    <select id="tableSelect"></select>
+    <button id="refreshBtn">刷新</button>
+    <span id="status" class="status"></span>
+  </section>
+
+  <section class="grid-wrap">
+    <table id="dataTable">
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section class="form-wrap">
+    <h2>编辑区（字段中文映射）</h2>
+    <div id="formGrid" class="form-grid"></div>
+    <div class="actions">
+      <button id="insertBtn">新增</button>
+      <button id="updateBtn">保存修改</button>
+      <button id="deleteBtn" class="danger">删除</button>
+      <button id="clearBtn">清空表单</button>
+    </div>
+  </section>
+
+  <script src="/static/admin.js"></script>
+</body>
+</html>

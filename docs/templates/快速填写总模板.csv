@@ -1,0 +1,8 @@
+表名(table),选项键(option_key),显示名称(label),价格(元)(price),钥匙数量(keys_count),积分组键(group_key),名称(name),图片地址(image_url),卡片背景(card_bg_color),颜色等级(palette_key),排序(sort_order),道具ID(item_id),道具类型(item_type:item/points_child),是否进奖池(in_pool:0/1),奖池权重(pool_weight),积分值(points_value),兑换积分(exchange_points),分解得积分(decompose_points),分解得钥匙(decompose_keys),直发仓库(direct_to_warehouse:0/1),弹窗图片(popup_image_url),限兑开关(redeem_limit_enabled:0/1),限兑数量(redeem_limit_count),兑换左标签(redeem_tag_left),兑换右标签(redeem_tag_right),配置键(setting_key),配置值(setting_value)
+purchase_options,single,10元1抽,10,1,,,,,,,,,,,,,,,,,,,,,,,
+purchase_options,bundle,100元11抽,100,11,,,,,,,,,,,,,,,,,,,,,,,
+points_groups,,,,,,points_pool,积分,/cf_images/jifen.png,"linear-gradient(180deg,#dcdcdc 0%,#c5c5c5 66%,#efefef 66%,#efefef 100%)",gray,99,,,,,,,,,,,,,,,,,
+prize_items,,,,,,,/cf_images/part3_porp_img1.png,,orange,100,example_item_001,item,1,0.8,,888,50,0,0,/cf_images/part3_porp_img1.png,1,1,单大区限兑1,不可交易,,
+prize_items,,,,,,,/cf_images/jifen.png,,gray,200,example_points_001,points_child,1,5.0,10,0,0,0,0,,0,0,,,,
+system_settings,,,,,,,,,,,,,,,,,,,,,,,,,points_image_url,/cf_images/jifen.png
+system_settings,,,,,,,,,,,,,,,,,,,,,,,,,redeem_destination,warehouse

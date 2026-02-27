@@ -24,25 +24,25 @@
 
 ## 1. 项目目录（你要认识的文件）
 
-项目根目录：`/Users/apple/Documents/PyCharm/穿越火线模拟器_副本6`
+项目根目录：`/Users/apple/Documents/PyCharm/浩劫艾丽莎`
 
 关键目录和文件：
 
-- `/Users/apple/Documents/PyCharm/穿越火线模拟器_副本6/lottery_simulator/server.py`
+- `/Users/apple/Documents/PyCharm/浩劫艾丽莎/lottery_simulator/server.py`
   - 后端主程序（HTTP 服务 + 抽奖逻辑 + 统计 + 模拟）
-- `/Users/apple/Documents/PyCharm/穿越火线模拟器_副本6/lottery_simulator/static/index.html`
+- `/Users/apple/Documents/PyCharm/浩劫艾丽莎/lottery_simulator/static/index.html`
   - 前端页面结构
-- `/Users/apple/Documents/PyCharm/穿越火线模拟器_副本6/lottery_simulator/static/app.js`
+- `/Users/apple/Documents/PyCharm/浩劫艾丽莎/lottery_simulator/static/app.js`
   - 前端交互逻辑（按钮事件、图表渲染、调用 API）
-- `/Users/apple/Documents/PyCharm/穿越火线模拟器_副本6/lottery_simulator/static/style.css`
+- `/Users/apple/Documents/PyCharm/浩劫艾丽莎/lottery_simulator/static/style.css`
   - 前端样式
-- `/Users/apple/Documents/PyCharm/穿越火线模拟器_副本6/lottery_simulator/data/lottery.db`
+- `/Users/apple/Documents/PyCharm/浩劫艾丽莎/lottery_simulator/data/lottery.db`
   - 奖池配置数据库（SQLite）
-- `/Users/apple/Documents/PyCharm/穿越火线模拟器_副本6/lottery_simulator/data/state.json`
+- `/Users/apple/Documents/PyCharm/浩劫艾丽莎/lottery_simulator/data/state.json`
   - 你的模拟过程状态（消费、钥匙、抽奖历史等）
-- `/Users/apple/Documents/PyCharm/穿越火线模拟器_副本6/cf_images/`
+- `/Users/apple/Documents/PyCharm/浩劫艾丽莎/cf_images/`
   - 活动图片资源（本地图片）
-- `/Users/apple/Documents/PyCharm/穿越火线模拟器_副本6/main.py`
+- `/Users/apple/Documents/PyCharm/浩劫艾丽莎/main.py`
   - 批量下载图片脚本（需要 `requests`）
 
 ---
@@ -62,7 +62,7 @@ python3 --version
 ### 第 2 步：进入后端目录
 
 ```bash
-cd "/Users/apple/Documents/PyCharm/穿越火线模拟器_副本6/lottery_simulator"
+cd "/Users/apple/Documents/PyCharm/浩劫艾丽莎/lottery_simulator"
 ```
 
 ### 第 3 步：启动服务
@@ -74,7 +74,8 @@ python3 server.py
 启动成功会看到类似：
 
 ```text
-Simulator running: http://127.0.0.1:8000
+Simulator running: http://127.0.0.1:18081
+Admin running: http://127.0.0.1:18081/admin
 DB path: .../lottery_simulator/data/lottery.db
 ```
 
@@ -83,10 +84,27 @@ DB path: .../lottery_simulator/data/lottery.db
 浏览器访问：
 
 ```text
-http://127.0.0.1:8000
+http://127.0.0.1:18081
 ```
 
 到这里就已经可以玩完整流程了。
+数据库可视化后台地址：`http://127.0.0.1:18081/admin`
+
+### 可视化改数据库（推荐）
+
+如果你不想手写 SQL，可以直接用图形化管理器：
+
+```bash
+cd "/Users/apple/Documents/PyCharm/浩劫艾丽莎/lottery_simulator"
+python3 db_admin_gui.py
+```
+
+特点：
+
+- 直接编辑 `lottery.db`
+- 表名和字段名都有中文映射
+- 支持新增、修改、删除
+- 支持常见字段下拉（如 0/1、`item_type`）
 
 ---
 
@@ -124,8 +142,8 @@ http://127.0.0.1:8000
 
 分解收益来自该道具配置：
 
-- `decompose_points`
-- `decompose_keys`
+- 积分分解活动：`decompose_points`
+- 钥匙分解活动：`decompose_keys`
 
 ### 3.4 仓库直发
 
@@ -192,7 +210,7 @@ http://127.0.0.1:8000
 
 路径：
 
-- `/Users/apple/Documents/PyCharm/穿越火线模拟器_副本6/lottery_simulator/data/lottery.db`
+- `/Users/apple/Documents/PyCharm/浩劫艾丽莎/lottery_simulator/data/lottery.db`
 
 主要表：
 
@@ -207,7 +225,7 @@ http://127.0.0.1:8000
 
 路径：
 
-- `/Users/apple/Documents/PyCharm/穿越火线模拟器_副本6/lottery_simulator/data/state.json`
+- `/Users/apple/Documents/PyCharm/浩劫艾丽莎/lottery_simulator/data/state.json`
 
 常见字段：
 
@@ -467,7 +485,7 @@ http://127.0.0.1:8000
 - `image_url`：卡面图片
 - `popup_image_url`：弹窗图
 - `card_bg_color`：卡片背景
-- `palette_key`：稀有色（`orange/purple/blue/gray`）
+- `palette_key`：稀有色（`red/orange/purple/blue/gray`）
 - `redeem_limit_enabled`：是否限兑
 - `redeem_limit_count`：限兑数量
 - `redeem_tag_left`、`redeem_tag_right`：兑换卡片角标
@@ -480,7 +498,7 @@ http://127.0.0.1:8000
 建议先备份：
 
 ```bash
-cp "/Users/apple/Documents/PyCharm/穿越火线模拟器_副本6/lottery_simulator/data/lottery.db" "/Users/apple/Documents/PyCharm/穿越火线模拟器_副本6/lottery_simulator/data/lottery.db.bak"
+cp "/Users/apple/Documents/PyCharm/浩劫艾丽莎/lottery_simulator/data/lottery.db" "/Users/apple/Documents/PyCharm/浩劫艾丽莎/lottery_simulator/data/lottery.db.bak"
 ```
 
 ### 10.1 查看当前奖池
@@ -496,7 +514,7 @@ ORDER BY sort_order,item_id;
 ```sql
 UPDATE prize_items
 SET pool_weight = 0.35
-WHERE item_id = 'knife_champion';
+WHERE item_id = 'legend_haojie';
 ```
 
 ### 10.3 设置“抽中即进仓库”
@@ -546,7 +564,7 @@ WHERE item_id='redeem_honor_soul';
 ### 10.7 配置稀有弹窗颜色
 
 ```sql
-UPDATE popup_highlight_rules SET enabled=1 WHERE palette_key IN ('orange','purple','blue');
+UPDATE popup_highlight_rules SET enabled=1 WHERE palette_key IN ('red','orange','purple','blue');
 UPDATE popup_highlight_rules SET enabled=0 WHERE palette_key='gray';
 ```
 
@@ -561,7 +579,7 @@ UPDATE popup_highlight_rules SET enabled=0 WHERE palette_key='gray';
 
 本项目现有素材主要在：
 
-- `/Users/apple/Documents/PyCharm/穿越火线模拟器_副本6/cf_images/`
+- `/Users/apple/Documents/PyCharm/浩劫艾丽莎/cf_images/`
 
 ### 下载素材脚本
 
@@ -574,14 +592,14 @@ python3 -m pip install requests
 下载主图（在项目根目录执行）：
 
 ```bash
-cd "/Users/apple/Documents/PyCharm/穿越火线模拟器_副本6"
+cd "/Users/apple/Documents/PyCharm/浩劫艾丽莎"
 python3 main.py
 ```
 
 下载 `lotb` 组图（建议在 `cf_images` 目录执行）：
 
 ```bash
-cd "/Users/apple/Documents/PyCharm/穿越火线模拟器_副本6/cf_images"
+cd "/Users/apple/Documents/PyCharm/浩劫艾丽莎/cf_images"
 python3 炫耀图片下载.py
 ```
 
@@ -599,7 +617,7 @@ python3 炫耀图片下载.py
 
 删除数据库文件后重启服务，后端会按内置默认值重建：
 
-- `/Users/apple/Documents/PyCharm/穿越火线模拟器_副本6/lottery_simulator/data/lottery.db`
+- `/Users/apple/Documents/PyCharm/浩劫艾丽莎/lottery_simulator/data/lottery.db`
 
 ### 12.3 最稳妥的备份策略
 
@@ -612,9 +630,13 @@ python3 炫耀图片下载.py
 
 ## 13. 常见问题（排错）
 
-### Q1：端口 8000 被占用，启动失败
+### Q1：端口被占用，启动失败
 
-改 `server.py` 里的 `PORT = 8000` 为别的端口（例如 `8010`），重启后访问新端口。
+用环境变量改端口启动，例如：
+
+```bash
+CF_SIM_PORT=18082 python3 server.py
+```
 
 ### Q2：抽奖提示“钥匙不足”
 
@@ -650,4 +672,3 @@ python3 炫耀图片下载.py
 - 本项目是本地概率模拟工具，不代表官方活动真实结果。
 - 统计结论受样本量、配置和模型假设影响，不构成收益承诺。
 - 所有道具发放均为本地数据演示，不接入真实账号资产系统。
-

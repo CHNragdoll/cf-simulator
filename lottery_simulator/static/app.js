@@ -20,6 +20,7 @@ const prizeGrid = document.getElementById("prizeGrid");
 const drawSummary = document.getElementById("drawSummary");
 const stashModalTable = document.getElementById("stashModalTable");
 const stashDecomposeTable = document.getElementById("stashDecomposeTable");
+const stashDecomposeValueHeader = document.getElementById("stashDecomposeValueHeader");
 const stashPrevPage = document.getElementById("stashPrevPage");
 const stashNextPage = document.getElementById("stashNextPage");
 const stashPageInfo = document.getElementById("stashPageInfo");
@@ -126,6 +127,7 @@ function renderStats() {
 
 function paletteClass(row) {
   const key = (row.palette_key || "").toLowerCase();
+  if (key === "red") return "palette-red";
   if (key === "orange") return "palette-orange";
   if (key === "purple") return "palette-purple";
   if (key === "blue") return "palette-blue";
@@ -324,17 +326,23 @@ function renderStash() {
 
 function renderDecomposeMap() {
   stashDecomposeTable.innerHTML = "";
+  const mode = state.decomposeView === "points" ? "points" : "keys";
+  const valueField = mode === "points" ? "decompose_points" : "decompose_keys";
+  const valueLabel = mode === "points" ? "分解所获积分" : "分解所获钥匙";
+  if (stashDecomposeValueHeader) {
+    stashDecomposeValueHeader.textContent = valueLabel;
+  }
   const rows = (state.config?.pool || [])
     .filter((r) => r.type === "item")
     .map((r) => ({
       name: r.name,
-      value: Number(r.decompose_keys || 0),
+      value: Number(r[valueField] || 0),
     }))
     .filter((r) => r.value > 0)
     .sort((a, b) => b.value - a.value);
 
   if (!rows.length) {
-    stashDecomposeTable.innerHTML = `<tr><td colspan="2" class="tip">当前活动没有可分解钥匙配置</td></tr>`;
+    stashDecomposeTable.innerHTML = `<tr><td colspan="2" class="tip">当前活动没有可分解${mode === "points" ? "积分" : "钥匙"}配置</td></tr>`;
     return;
   }
 
@@ -458,6 +466,17 @@ function renderSimulation() {
     return;
   }
 
+  const decomposeMode = state.decomposeView === "points" ? "points" : "keys";
+  const expectedDecomposePerDraw = (state.config?.pool || [])
+    .filter((r) => r.type === "item" && Number(r.direct_to_warehouse || 0) === 0)
+    .reduce((acc, r) => {
+      const p = Number(r.probability || 0);
+      const gain = decomposeMode === "points"
+        ? Number(r.decompose_points || 0)
+        : Number(r.decompose_keys || 0);
+      return acc + p * gain;
+    }, 0);
+
   const summaryCards = [
     ["模拟次数", `${s.summary.runs}`],
     ["道具数量", `${s.summary.item_count}`],
@@ -466,7 +485,12 @@ function renderSimulation() {
     ["全分解均价(全道具均值)", `${(s.summary.avg_full_cost_all_items || 0).toFixed(2)} 元`],
     ["纯保底均价(全道具均值)", `${(s.summary.avg_pure_cost_all_items || 0).toFixed(2)} 元`],
     ["不分解时单抽期望积分", `${Number(s.summary.expected_points_per_draw_no_decompose || 0).toFixed(4)}`],
-    ["全分解时单抽期望钥匙", `${Number(s.summary.expected_keys_per_draw_full_decompose || 0).toFixed(6)}`],
+    [
+      decomposeMode === "points" ? "全分解时单抽期望积分" : "全分解时单抽期望钥匙",
+      decomposeMode === "points"
+        ? `${expectedDecomposePerDraw.toFixed(4)}`
+        : `${Number(s.summary.expected_keys_per_draw_full_decompose || 0).toFixed(6)}`,
+    ],
   ];
   for (const [label, value] of summaryCards) {
     const div = document.createElement("div");
@@ -705,7 +729,7 @@ function fmtTime(ts) {
 
 function isRareItemResult(r) {
   if (!r || r.type !== "item") return false;
-  const highlightPalettes = new Set(state.config?.popup_highlight_palettes || ["orange", "purple", "blue"]);
+  const highlightPalettes = new Set(state.config?.popup_highlight_palettes || ["red", "orange", "purple", "blue"]);
   const poolItem = (state.config?.pool || []).find((x) => x.type === "item" && x.id === r.id);
   const palette = (poolItem?.palette_key || "").toLowerCase();
   return highlightPalettes.has(palette);
